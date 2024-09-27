@@ -7,15 +7,15 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="   min-h-screen   bg-background ">
-      <div className=" lg:flex     md:flex items-center lg:px-20">
+    <section className=" min-h-screen   bg-background ">
+      <div className=" lg:flex  md:flex items-center lg:px-20">
         {/* Blob */}
         <HeroBlob />
         <div className=" lg:w-1/2 flex flex-col justify-center lg:mb-10 md:w-1/2 lg:mt-10 ">
           {/* Description */}
           <div className="  max-sm:px-5 sm:px-5 max-sm:-mt-10 sm:-mt-10 ">
             <h1 className=" max-sm:text-4xl sm:text-4xl  font-bold tracking-wide text-foreground">
-              Hi  👋, I'm Jah!
+              Hi 👋, I'm Jah!
             </h1>
             <h6 className="text-foreground max-sm:text-lg py-2 ">
               A software engineer with a primary focus on full stack web
