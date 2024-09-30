@@ -31,9 +31,9 @@ const Header = () => {
     setShowMenu((prevState) => !prevState);
   };
   return (
-    <div className="h-16 fixed w-full ">
+    <nav className=" fixed top-0 w-full z-50">
       <div className="p-3   shadow-sm shadow-accent   max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500 w-full lg:px-[80px] xl:px-[100px] md:px-2  ">
-        <div className="flex justify-between items-center   md:px-2 max-sm:px-2  ">
+        <div className="flex justify-between items-center   md:px-2 max-sm:px-2 z-50 ">
           <div>Icon </div>
           {/*Navbar menu */}
           <div className="max-sm:hidden sm:hidden  md:block">
@@ -160,7 +160,7 @@ const Header = () => {
           )}
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
