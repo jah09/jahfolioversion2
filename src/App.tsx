@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hero from "@/pages/Hero";
-import About from "@/pages/About";
+import About from "@/pages/About/AboutMe";
 import Contact from "@/pages/Contact";
 import Project from "@/pages/Projects";
 
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      {loading ? (
+      {/* {!loading ? (
         <div className="loader-wrapper bg-[#0f172a]   flex justify-center items-center   min-h-screen  ">
           <l-helix size="45" speed="2.5" color="white"></l-helix>
         </div>
@@ -43,7 +43,17 @@ function App() {
             </Route>
           </Routes>
         </Router>
-      )}
+      )} */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Hero />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }

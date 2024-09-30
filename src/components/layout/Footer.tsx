@@ -10,7 +10,7 @@ const Footer = () => {
       {/* max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500*/}
       <div className="p-3 bg-background shadow shadow-accentForeground w-screen lg:px-[100px]  xl:px-[100px]  flex justify-between  max-sm:px-4  sm:px-4 md:px-4   ">
         <div>
-          <h1>Icon here</h1>
+          <h1 className="text-foreground">Icon here</h1>
         </div>
 
         <div className="md:flex-col md:flex items-center  max-sm:hidden sm:hidden">
