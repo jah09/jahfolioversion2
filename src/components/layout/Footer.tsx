@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         <div className="md:flex-col md:flex items-center  max-sm:hidden sm:hidden">
-          <h1 className="font-semibold text-foreground">Contact me</h1>
+          <h1 className="font-semibold text-foreground">Contact me 🚀</h1>
           <p className="tracking-wider flex gap-x-1 items-center text-foreground ">
             <span>
               <FaLinkedin

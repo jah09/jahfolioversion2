@@ -17,7 +17,7 @@ const Hero = () => {
             <h1 className=" max-sm:text-4xl sm:text-4xl  font-bold tracking-wide text-foreground">
               Hi 👋, I'm Jah!
             </h1>
-            <h6 className="text-foreground max-sm:text-lg py-2 ">
+            <h6 className="text-foreground max-sm:text-lg py-2 tracking-wider">
               A software engineer with a primary focus on full stack web
               development.
             </h6>
