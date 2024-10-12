@@ -39,25 +39,25 @@ const Header = () => {
           <div className="max-sm:hidden sm:hidden  md:block">
             <ul className="flex gap-x-3 cursor-pointer  text-lg ">
               <li>
-                <Link to="/" className="text-foreground font-semibold ">
+                <Link to="/" className="text-foreground font-semibold tracking-wider ">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-foreground  font-semibold ">
+                <Link to="/about" className="text-foreground  font-semibold tracking-wider ">
                   About
                 </Link>
               </li>
               <li>
                 <Link
                   to="/projects"
-                  className="text-foreground  font-semibold "
+                  className="text-foreground  font-semibold tracking-wider "
                 >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-foreground  font-semibold ">
+                <Link to="/contact" className="text-foreground  font-semibold tracking-wider ">
                   Contact
                 </Link>
               </li>
