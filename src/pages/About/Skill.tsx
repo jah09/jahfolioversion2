@@ -12,7 +12,7 @@ const Skill = () => {
       <div className="lg:px-20  min-h-screen">
         <div className="py-[70px]">
           <div className="flex flex-row mx-20   ">
-            <div className=" w-1/2    ">
+            <div className=" w-1/2">
               <div className="w-full  grid grid-cols-4 gap-3 p-3">
                 {technologies &&
                   technologies.map((item, index) => (
