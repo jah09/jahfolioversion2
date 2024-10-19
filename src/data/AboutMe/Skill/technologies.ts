@@ -30,7 +30,6 @@ import { SiPostman } from "react-icons/si";
 export interface Technology {
   techLink: string;
   techName: string;
-
   icon: IconType;
 }
 export const technologies: Technology[] = [

@@ -53,8 +53,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Skill />
-      <Certification/>
+    
     </section>
   );
 };

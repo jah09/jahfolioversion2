@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hero from "@/pages/Hero";
-import About from "@/pages/About/AboutMe";
+import About from "@/pages/About/index";
 import Contact from "@/pages/Contact";
 import Project from "@/pages/Projects";
 

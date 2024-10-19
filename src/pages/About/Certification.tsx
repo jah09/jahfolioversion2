@@ -14,7 +14,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 const Certification = () => {
   return (
     <section>
-      <div className=" lg:px-20  min-h-screen ">
+      <div className="lg:px-20  min-h-screen  bg-background">
         <div className="py-[50px] ">
           <div className="flex flex-row mx-20   ">
             <div className=" w-1/2 flex justify-center  flex-col  mx-4">
@@ -29,7 +29,7 @@ const Certification = () => {
                 real-world scenarios.
               </p>
             </div>
-            <div className=" w-1/2    flex items-center justify-center">
+            <div className=" w-1/2 flex items-center justify-center">
               <div className=" h-[500px] overflow-y-auto scrollbar  px-2 ">
                 {/* First cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem]  ">
@@ -41,10 +41,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b] rounded-b-lg">
                       JavaScript Programming
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]">
                       Certificate of completion
                     </h1>
                   </CardFooter>
@@ -59,10 +59,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b] rounded-b-lg">
                       Software Engineering
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]">
                       Certificate of completion
                     </h1>
                   </CardFooter>
@@ -78,32 +78,15 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
                       Cloud Computing
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]  ">
                       Certificate of completion
                     </h1>
                   </CardFooter>
                 </Card>
                 {/* Fourth cert  */}
-                <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
-                  <CardContent className="p-0 h-full  ">
-                    <img
-                      src={python}
-                      className="animate-fade-in block h-full w-full  rounded-lg scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
-                      alt=""
-                    />
-                  </CardContent>
-                  <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
-                      python
-                    </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
-                      Certificate of completion
-                    </h1>
-                  </CardFooter>
-                </Card>
                 {/* Fifth cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
@@ -114,10 +97,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
                       Python
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]  ">
                       Certificate of completion
                     </h1>
                   </CardFooter>
@@ -132,10 +115,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b] rounded-b-lg">
                       Data science with python
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b] ">
                       Certificate of completion
                     </h1>
                   </CardFooter>
@@ -150,10 +133,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
                       GDSC
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]  ">
                       Certificate of participation
                     </h1>
                   </CardFooter>
@@ -168,10 +151,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
                       GDSC
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]  ">
                       Certificate of membership
                     </h1>
                   </CardFooter>
@@ -186,10 +169,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
                       Tensorflow
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]  ">
                       Certificate of participation
                     </h1>
                   </CardFooter>
@@ -204,10 +187,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
                       Zuitt
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]  ">
                       Certificate of participation
                     </h1>
                   </CardFooter>
@@ -222,10 +205,10 @@ const Certification = () => {
                     />
                   </CardContent>
                   <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
-                    <h1 className="text-2xl font-bold text-[#1e293b] shadow-xl rounded-b-lg">
+                    <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
                       Wordpress
                     </h1>
-                    <h1 className="text-sm font-light text-[#1e293b] shadow-xl">
+                    <h1 className="text-sm font-light text-[#1e293b]  ">
                       Certificate of completion
                     </h1>
                   </CardFooter>
