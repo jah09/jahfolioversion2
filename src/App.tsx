@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hero from "@/pages/Hero";
 import About from "@/pages/About/index";
 import Contact from "@/pages/Contact";
-import Project from "@/pages/Projects";
+import Project from "@/pages/Project/index";
+import ProjectDetails from "@/pages/Project/ProjectDetails";
 
 import "ldrs/helix";
 function App() {
@@ -50,6 +51,7 @@ function App() {
             <Route index element={<Hero />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Project />} />
+            <Route path="/projects-details" element={<ProjectDetails />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
