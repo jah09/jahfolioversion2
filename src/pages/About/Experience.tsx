@@ -20,7 +20,7 @@ const Experience = () => {
     <section className="lg:px-20 min-h-screen bg-background">
       <div className="py-[50px] ">
         <div className="flex flex-row mx-20">
-          <div className=" w-3/5">
+          <div className="w-3/5">
             <div className="w-full max-w-6xl mx-auto">
               <div className="flex flex-col justify-center">
                 <div className="w-full max-w-3xl mx-auto">
