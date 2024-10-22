@@ -95,16 +95,16 @@ const Projects = () => {
             {/* Projects here */}
             <div className="lg:grid lg:grid-cols-3 gap-4">
               {passedProjectsData &&
-                passedProjectsData.map((item:any, index:number) => (
+                passedProjectsData.map((item: any, index: number) => (
                   <Card
                     className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300"
                     key={index}
                   >
-                    <CardContent className="rounded-xl mx-2  p-0 ">
+                    <CardContent className="rounded-xl mx-2  p-0">
                       <img
                         src={item?.image}
                         alt=""
-                        className="rounded-xl bg-none"
+                        className="rounded-xl bg-none "
                       />
                     </CardContent>
                     <CardContent className="py-4 flex items-center justify-between">
@@ -117,7 +117,10 @@ const Projects = () => {
                       <div className="flex space-x-2">
                         {item?.techStack?.map((tech, techIndex) =>
                           tech.icon ? (
-                            <div key={techIndex} className="">
+                            <div
+                              key={techIndex} 
+                              
+                            >
                               <tech.icon className="h-5 w-5 text-foreground" />
                             </div>
                           ) : null
