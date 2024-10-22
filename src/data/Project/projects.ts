@@ -1,11 +1,7 @@
 import { v4 as uuid } from "uuid";
 import { IconType } from "react-icons";
 import { SiReactquery } from "react-icons/si";
-import {
-  FaReact,
-  FaLaravel,
-  FaVuejs,
-} from "react-icons/fa";
+import { FaReact, FaLaravel, FaVuejs } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoCss3 } from "react-icons/io";
@@ -13,7 +9,13 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { SiLaragon, SiAndroidstudio } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import project_pos from "@/assets/image/project_pos.png";
-
+import file from "@/assets/image/file.png";
+import project_portfolio from "@/assets/image/project_portfolio.png";
+import project_joblisting from "@/assets/image/project_joblisting.png";
+import project_dailybudd from "@/assets/image/project_dailybudd.png";
+import project_jokes from "@/assets/image/project_jokes.png";
+import project_jalida from "@/assets/image/project_jalida.png";
+import project_tubig from "@/assets/image/project_tubig.png";
 export interface TechStack {
   icon?: IconType;
   tag: string;
@@ -38,7 +40,7 @@ const projectsData: Project[] = [
     name: "2big Web and Mobile App",
     description:
       "Capstone Project. Many features for this project. Click Github to see more details about the project.",
-    image: project_pos,
+    image: project_tubig,
     githubRepo: "https://github.com/jah09/2bigCustomerReporn",
     liveDemo: "",
     techStack: [
@@ -67,10 +69,32 @@ const projectsData: Project[] = [
   {
     id: uuid(),
     isImportant: true,
+    name: "Portfolio Version 1",
+    description: "Personal Project. This is my first version of portfolio",
+    image: project_portfolio,
+    githubRepo: "https://github.com/jah09/2bigCustomerReporn",
+    liveDemo: "",
+    techStack: [
+      {
+        icon: FaReact,
+        tag: "reactjs",
+        techStackName: "ReactJs",
+      },
+      {
+        icon: RiTailwindCssFill,
+        tag: "tailwind",
+        techStackName: "Tailwind",
+      },  
+    ],
+  },
+
+  {
+    id: uuid(),
+    isImportant: true,
     name: "Joblisting Revamp",
     description:
       "Intern Project. This project can add/display job. Create resume to use in job's application. Notification feature also available.",
-    image: project_pos,
+    image: project_joblisting,
     githubRepo: "https://github.com/jah09/job-listing-revamp",
     liveDemo: "",
     techStack: [
@@ -139,7 +163,7 @@ const projectsData: Project[] = [
     name: "Daily Routine Budd",
     description:
       "Personal project. Just like a ToDo list, that can add daily routine. Edit the item and can delete. Understanding also the react hooks.",
-    image: project_pos,
+    image: project_dailybudd,
     githubRepo: "https://github.com/jah09/dailyroutinebud",
     liveDemo: "https://jah09.github.io/dailyroutinebud/",
     techStack: [
@@ -161,7 +185,7 @@ const projectsData: Project[] = [
     name: "JalidaLand",
     description:
       "Personal project. Search your favorite movie. Also, a practice in how to use fetch in React. Understand the response from the API.",
-    image: project_pos,
+    image: project_jalida,
     githubRepo: "https://github.com/jah09/jalida",
     liveDemo: "https://jah09.github.io/jalida/",
     techStack: [
@@ -183,7 +207,7 @@ const projectsData: Project[] = [
     name: "Random Jokes",
     description:
       "Practice project. Generates a random jokes from Chuck Norries API. I used Tanstack Query to understand how to it works.",
-    image: project_pos,
+    image: project_jokes,
     githubRepo: "https://github.com/jah09/randomjokes",
     liveDemo: "https://jah09.github.io/randomjokes/",
     techStack: [
