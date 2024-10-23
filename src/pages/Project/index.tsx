@@ -3,9 +3,10 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { FaStar } from "react-icons/fa";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import projectsData from "@/data/Project/projects";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
-  const [selectedTag, setSelectedTag] = useState<string>('all');
+  const [selectedTag, setSelectedTag] = useState<string>("all");
   const ref = useRef<HTMLDivElement>(null);
   const [passedProjectsData, setPassedProjectData] =
     useState<object>(projectsData);
@@ -38,30 +39,31 @@ const Projects = () => {
       name: "MySQL",
       tag: "mysql",
     },
+    {
+      name: "Mobile",
+      tag: "mobile",
+    },
+    {
+      name: "Web",
+      tag: "web",
+    },
   ];
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        setSelectedTag(""); // Deselect the tag when clicking outside
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [ref]);
-  useEffect(() => {
     if (selectedTag === "all") {
       setPassedProjectData(projectsData);
-    }
-    else if (selectedTag) {
-       const filteredData = projectsData.filter((data) =>
-        data.techStack?.some((tech) => tech.tag === selectedTag)
-      );
-        console.log("filteredData", filteredData);
+    } else if (selectedTag) {
+      const filteredData = projectsData.filter((data) => {
+        return (
+          data.tag === selectedTag ||
+          data.techStack?.some((tech) => tech.tag === selectedTag)
+        );
+      });
+
       setPassedProjectData(filteredData);
     }
   }, [selectedTag]);
- 
+
   return (
     <section className=" bg-background" ref={ref}>
       <div className="lg:px-20 min-h-screen">
@@ -95,49 +97,50 @@ const Projects = () => {
             {/* Projects here */}
             <div className="lg:grid lg:grid-cols-3 gap-4">
               {passedProjectsData &&
-                passedProjectsData.map((item: any, index: number) => (
-                  <Card
-                    className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300"
-                    key={index}
-                  >
-                    <CardContent className="rounded-xl mx-2  p-0">
-                      <img
-                        src={item?.image}
-                        alt=""
-                        className="rounded-xl bg-none "
-                      />
-                    </CardContent>
-                    <CardContent className="py-4 flex items-center justify-between">
-                      <h1 className="text-xl">{item?.name}</h1>
-                      {item?.isImportant && (
-                        <FaStar className="w-6 h-6 text-yellow-400" />
-                      )}
-                    </CardContent>
-                    <CardFooter className="flex justify-between py-4 mt-4">
-                      <div className="flex space-x-2">
-                        {item?.techStack?.map((tech, techIndex) =>
-                          tech.icon ? (
-                            <div
-                              key={techIndex} 
-                              
-                            >
-                              <tech.icon className="h-5 w-5 text-foreground" />
-                            </div>
-                          ) : null
+                passedProjectsData.map((item, index: number) => {
+                  return (
+                    <Card
+                      className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300"
+                      key={index}
+                    >
+                      <CardContent className="rounded-xl mx-2  p-0 mt-1">
+                        <img
+                          src={item?.image}
+                          alt=""
+                          className="rounded-xl bg-none "
+                        />
+                      </CardContent>
+                      <CardContent className="py-4 flex items-center justify-between">
+                        <h1 className="text-xl">{item?.name}</h1>
+                        {item?.isImportant && (
+                          <FaStar className="w-6 h-6 text-yellow-400" />
                         )}
-                      </div>
-                      <button
-                        className="align-middle select-none font-sans font-bold text-center uppercase disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-1.5 px-2 rounded-lg bg-primaryForeground  shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none flex items-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300"
-                        type="button"
-                      >
-                        <span className="text-foreground tracking-wide">
-                          Read More
-                        </span>
-                        <IoIosArrowRoundForward className="w-8 h-8 text-foreground" />
-                      </button>
-                    </CardFooter>
-                  </Card>
-                ))}
+                      </CardContent>
+                      <CardFooter className="flex justify-between py-4 mt-4">
+                        <div className="flex space-x-2">
+                          {item?.techStack?.map((tech, techIndex) =>
+                            tech.icon ? (
+                              <div key={techIndex}>
+                                <tech.icon className="h-5 w-5 text-foreground" />
+                              </div>
+                            ) : null
+                          )}
+                        </div>
+                        <Link to={`/project-details/${item.id}`}>
+                          <button
+                            className="align-middle select-none font-sans font-bold text-center uppercase disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-1.5 px-2 rounded-lg bg-primaryForeground shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none flex items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
+                            type="button"
+                          >
+                            <span className="text-foreground tracking-wide">
+                              Read More
+                            </span>
+                            <IoIosArrowRoundForward className="w-8 h-8 text-foreground" />
+                          </button>
+                        </Link>
+                      </CardFooter>
+                    </Card>
+                  );
+                })}
             </div>
           </div>
         </div>

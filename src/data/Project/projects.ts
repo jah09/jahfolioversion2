@@ -9,13 +9,17 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { SiLaragon, SiAndroidstudio } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import project_pos from "@/assets/image/project_pos.png";
-import file from "@/assets/image/file.png";
+import project_newsurge from "@/assets/image/project_newsurge.png";
+import project_dailyagenda from "@/assets/image/project_dailyagenda.png";
 import project_portfolio from "@/assets/image/project_portfolio.png";
 import project_joblisting from "@/assets/image/project_joblisting.png";
 import project_dailybudd from "@/assets/image/project_dailybudd.png";
 import project_jokes from "@/assets/image/project_jokes.png";
 import project_jalida from "@/assets/image/project_jalida.png";
 import project_tubig from "@/assets/image/project_tubig.png";
+import project_garboogle from "@/assets/image/project_garboogle.png";
+import project_moviewaze from "@/assets/image/project_moviewaze.png";
+
 export interface TechStack {
   icon?: IconType;
   tag: string;
@@ -23,6 +27,7 @@ export interface TechStack {
 }
 
 export interface Project {
+  tag: string;
   id: string;
   isImportant: boolean;
   name: string;
@@ -36,6 +41,7 @@ export interface Project {
 const projectsData: Project[] = [
   {
     id: uuid(),
+    tag: "mobile",
     isImportant: true,
     name: "2big Web and Mobile App",
     description:
@@ -68,6 +74,7 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "web",
     isImportant: true,
     name: "Portfolio Version 1",
     description: "Personal Project. This is my first version of portfolio",
@@ -84,12 +91,12 @@ const projectsData: Project[] = [
         icon: RiTailwindCssFill,
         tag: "tailwind",
         techStackName: "Tailwind",
-      },  
+      },
     ],
   },
-
   {
     id: uuid(),
+    tag: "web",
     isImportant: true,
     name: "Joblisting Revamp",
     description:
@@ -122,6 +129,7 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "web",
     isImportant: true,
     name: "Pos System",
     description:
@@ -159,6 +167,7 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "web",
     isImportant: false,
     name: "Daily Routine Budd",
     description:
@@ -181,6 +190,7 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "web",
     isImportant: false,
     name: "JalidaLand",
     description:
@@ -203,6 +213,7 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "web",
     isImportant: false,
     name: "Random Jokes",
     description:
@@ -230,11 +241,12 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "mobile",
     isImportant: false,
     name: "MovieWavez",
     description:
       "Personal project. Search your favorite movie  and get the result. Understand the retrofit/REST API using Android Studio.",
-    image: project_pos,
+    image: project_moviewaze,
     githubRepo: "https://github.com/jah09/movie_wavez",
     liveDemo: "",
     techStack: [
@@ -256,11 +268,12 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "mobile",
     isImportant: false,
     name: "NewsSurge360",
     description:
       "Personal project. Search news, and get the result. Understand the REST API/Retrofit using Android Studio.",
-    image: project_pos,
+    image: project_newsurge,
     githubRepo: "https://github.com/jah09/news_surge360",
     liveDemo: "",
     techStack: [
@@ -282,11 +295,39 @@ const projectsData: Project[] = [
   },
   {
     id: uuid(),
+    tag: "mobile",
+    isImportant: false,
+    name: "Garboogle",
+    description:
+      "Personal project. Search news, and get the result. Understand the REST API/Retrofit using Android Studio.",
+    image: project_garboogle,
+    githubRepo: "https://github.com/jah09/news_surge360",
+    liveDemo: "",
+    techStack: [
+      {
+        icon: SiAndroidstudio,
+        tag: "androidstudio",
+        techStackName: "Android Studio ",
+      },
+      {
+        icon: IoLogoFirebase,
+        tag: "firebase",
+        techStackName: "Firebase",
+      },
+      {
+        tag: "retrofit",
+        techStackName: "Retrofit",
+      },
+    ],
+  },
+  {
+    id: uuid(),
+    tag: "mobile",
     isImportant: false,
     name: "Daily Agenda",
     description:
       "Personal project. ToDo list, can create, read, update and delete your To Do items.",
-    image: project_pos,
+    image: project_dailyagenda,
     githubRepo: "https://github.com/jah09/daily-agenda",
     liveDemo: "",
     techStack: [
