@@ -25,7 +25,9 @@ export interface TechStack {
   tag: string;
   techStackName: string;
 }
-
+export interface Feature {
+  featureDescription: string;
+}
 export interface Project {
   tag: string;
   id: string;
@@ -36,6 +38,7 @@ export interface Project {
   githubRepo: string;
   liveDemo: string;
   techStack?: TechStack[];
+  features?: Feature[];
 }
 
 const projectsData: Project[] = [
@@ -45,7 +48,7 @@ const projectsData: Project[] = [
     isImportant: true,
     name: "2big Web and Mobile App",
     description:
-      "Capstone Project. Many features for this project. Click Github to see more details about the project.",
+      "Capstone Project. This study aims to design and develop a platform to manage orders, deliveries, and inventory for water refilling stations.",
     image: project_tubig,
     githubRepo: "https://github.com/jah09/2bigCustomerReporn",
     liveDemo: "",
@@ -71,6 +74,30 @@ const projectsData: Project[] = [
         techStackName: "Gcp",
       },
     ],
+    features: [
+      {
+        featureDescription: "Customer can take orders",
+      },
+      {
+        featureDescription: "Monitor the following: their deliveries",
+      },
+      {
+        featureDescription: "Order status and points",
+      },
+      {
+        featureDescription:
+          "Customer can view: list of water refilling stations nearby",
+      },
+      {
+        featureDescription: "WRS products and rates, and",
+      },
+      {
+        featureDescription: "Operation time.",
+      },
+      {
+        featureDescription: "Customer also can post rates and reviews.",
+      },
+    ],
   },
   {
     id: uuid(),
@@ -93,6 +120,7 @@ const projectsData: Project[] = [
         techStackName: "Tailwind",
       },
     ],
+    features: [],
   },
   {
     id: uuid(),
@@ -124,6 +152,23 @@ const projectsData: Project[] = [
         icon: SiLaragon,
         tag: "laragon",
         techStackName: "Laragon",
+      },
+    ],
+    features: [
+      {
+        featureDescription: "User can add jobs posting",
+      },
+      {
+        featureDescription: "User can create a resume",
+      },
+      {
+        featureDescription: "User can apply to a job",
+      },
+      {
+        featureDescription: "User can store files in an S3 bucket",
+      },
+      {
+        featureDescription: "And many more.",
       },
     ],
   },
@@ -164,6 +209,17 @@ const projectsData: Project[] = [
         techStackName: "VueJs",
       },
     ],
+    features: [
+      {
+        featureDescription: "User can add brand, product, and category",
+      },
+      {
+        featureDescription: "Modify brands",
+      },
+      {
+        featureDescription: "And many more.",
+      },
+    ],
   },
   {
     id: uuid(),
@@ -187,6 +243,11 @@ const projectsData: Project[] = [
         techStackName: "Tailwind",
       },
     ],
+    features: [
+      {
+        featureDescription: "User can add,edit and delete daily routine",
+      },
+    ],
   },
   {
     id: uuid(),
@@ -208,6 +269,11 @@ const projectsData: Project[] = [
         icon: IoLogoCss3,
         tag: "css",
         techStackName: "CSS",
+      },
+    ],
+    features: [
+      {
+        featureDescription: "User can search their favorite movies",
       },
     ],
   },
@@ -238,12 +304,17 @@ const projectsData: Project[] = [
         techStackName: "Tanstack Query",
       },
     ],
+    features: [
+      {
+        featureDescription: "Generate different joke from the API.",
+      },
+    ],
   },
   {
     id: uuid(),
     tag: "mobile",
     isImportant: false,
-    name: "MovieWavez",
+    name: "MovieWaze",
     description:
       "Personal project. Search your favorite movie  and get the result. Understand the retrofit/REST API using Android Studio.",
     image: project_moviewaze,
@@ -263,6 +334,12 @@ const projectsData: Project[] = [
       {
         tag: "retrofit",
         techStackName: "Retrofit",
+      },
+    ],
+    features: [
+      {
+        featureDescription:
+          "Search your favorite movie with a different genre and get the result.",
       },
     ],
   },
@@ -292,16 +369,24 @@ const projectsData: Project[] = [
         techStackName: "Retrofit",
       },
     ],
+    features: [
+      {
+        featureDescription:
+          "Search news with a different category and get the result.",
+      },
+      {
+        featureDescription: "Explore news contents",
+      },
+    ],
   },
   {
     id: uuid(),
     tag: "mobile",
     isImportant: false,
     name: "Garboogle",
-    description:
-      "Personal project. Search news, and get the result. Understand the REST API/Retrofit using Android Studio.",
+    description: "Personal project.  Import different garbage article.",
     image: project_garboogle,
-    githubRepo: "https://github.com/jah09/news_surge360",
+    githubRepo: "https://github.com/jah09/Garboogle",
     liveDemo: "",
     techStack: [
       {
@@ -319,6 +404,15 @@ const projectsData: Project[] = [
         techStackName: "Retrofit",
       },
     ],
+    features: [
+      {
+        featureDescription:
+          "User can add new article. They can modify it and delete article and view externally.",
+      },
+      {
+        featureDescription: "User can edit and update their profile.",
+      },
+    ],
   },
   {
     id: uuid(),
@@ -326,7 +420,7 @@ const projectsData: Project[] = [
     isImportant: false,
     name: "Daily Agenda",
     description:
-      "Personal project. ToDo list, can create, read, update and delete your To Do items.",
+      "Personal project. ToDo list, can create, read, update and delete your ToDo items.",
     image: project_dailyagenda,
     githubRepo: "https://github.com/jah09/daily-agenda",
     liveDemo: "",
@@ -344,6 +438,18 @@ const projectsData: Project[] = [
       {
         tag: "firebasestorage",
         techStackName: "Firebase Storage",
+      },
+    ],
+    features: [
+      {
+        featureDescription:
+          "User can add new ToDo item. They can modify it and delete ToDo item.",
+      },
+      {
+        featureDescription: "Completed and uncompleted task.",
+      },
+      {
+        featureDescription: "User can edit and update their profile.",
       },
     ],
   },
