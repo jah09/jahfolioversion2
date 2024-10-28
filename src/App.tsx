@@ -11,6 +11,8 @@ import "ldrs/helix";
 function App() {
   const [count, setCount] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(true);
+  const secretKey = process.env.APP_SECRET_KEY;
+
   //hooks
   useEffect(() => {
     // Increment the count every 50ms until it reaches 100
@@ -26,6 +28,12 @@ function App() {
     }, 50); // Adjust timing to control speed
     return () => clearInterval(interval);
   }, []);
+
+
+  if (!secretKey) {
+    // Optionally, stop the app from rendering
+    return <div>Unauthorized Access</div>;
+  }
 
   return (
     <>
