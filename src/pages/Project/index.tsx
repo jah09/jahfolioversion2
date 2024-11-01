@@ -98,17 +98,25 @@ const Projects = () => {
             <div className="lg:grid lg:grid-cols-3 gap-4">
               {passedProjectsData &&
                 passedProjectsData.map((item, index: number) => {
+                  console.log("item",item)
                   return (
                     <Card
                       className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300"
                       key={index}
                     >
                       <CardContent className="rounded-xl mx-2  p-0 mt-1">
-                        <img
-                          src={item?.image}
-                          alt=""
-                          className="rounded-xl bg-none "
-                        />
+                        {item.images && item.images.length > 0 && (
+                          <div>
+                            {item.images && item.images[0] && (
+                              <img
+                                src={item.images[0].imageUrl} // Accessing only the first image
+                                alt={`Project ${index} First Image`} // Alt text for accessibility
+                                style={{ width: "100%", height: "auto" }} // Adjust styles as needed
+                              />
+                            )}
+                          </div>
+                        )}
+                       
                       </CardContent>
                       <CardContent className="py-4 flex items-center justify-between">
                         <h1 className="text-xl">{item?.name}</h1>

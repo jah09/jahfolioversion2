@@ -11,7 +11,7 @@ const Contact = () => {
           <div className="w-1/2">
             <div className="mt-20">
               <h1 className="text-foreground text-3xl mx-1">
-                <span className="text-5xl text-foreground ">
+                <span className="text-5xl text-foreground underline-offset-4 underline decoration-2">
                   Let's talk business!
                 </span>{" "}
                 I'd love to hear from you. Here's how you can reach me.
