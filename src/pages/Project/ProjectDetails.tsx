@@ -6,7 +6,7 @@ import project_tubig from "@/assets/image/project_tubig.png";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import { useParams } from "react-router-dom";
-import { Project, TechStack } from "@/data/Project/projects";
+import { Project } from "@/data/Project/projects";
 import projectsData from "@/data/Project/projects";
 import { FaStar } from "react-icons/fa";
 
@@ -61,42 +61,20 @@ const ProjectDetails = () => {
               <Card className=" mt-4 flex min-h-auto bg-background">
                 {/* Small Card Project Image */}
                 <div className="p-1 mr-2">
-                  <Card className="bg-background ">
-                    <CardContent className="rounded-none py-2 ">
-                      <img
-                        src={project_tubig}
-                        alt=" "
-                        className="w-60 object-fill"
-                      />
-                    </CardContent>
-                  </Card>
-                  <Card className="bg-background mt-1">
-                    <CardContent className="rounded-md py-2 ">
-                      <img
-                        src={project_tubig}
-                        alt=" "
-                        className="w-60 object-fill"
-                      />
-                    </CardContent>
-                  </Card>
-                  <Card className="bg-background mt-1">
-                    <CardContent className="rounded-md py-2 ">
-                      <img
-                        src={project_tubig}
-                        alt=" "
-                        className="w-60 object-fill"
-                      />
-                    </CardContent>
-                  </Card>
-                  <Card className="bg-background mt-1">
-                    <CardContent className="rounded-md py-2 ">
-                      <img
-                        src={project_tubig}
-                        alt=" "
-                        className="w-60 object-fill"
-                      />
-                    </CardContent>
-                  </Card>
+                  {allProjectsData &&
+                    allProjectsData[0]?.images
+                      ?.slice(1)
+                      .map((imageItem, imageIndex) => (
+                        <Card className="bg-background mt-0.5" key={imageIndex}>
+                          <CardContent className="rounded-none py-2 ">
+                            <img
+                              src={imageItem.imageUrl}
+                              alt=" "
+                              className="w-60 object-fill"
+                            />
+                          </CardContent>
+                        </Card>
+                      ))}
                 </div>
                 {/* Main Card Project Image */}
                 <div
@@ -106,11 +84,16 @@ const ProjectDetails = () => {
                       : ""
                   }`}
                 >
-                  <img
-                    src={allProjectsData && allProjectsData[0]?.image}
-                    alt=" "
-                    className="h-[22rem]"
-                  />
+                  {allProjectsData &&
+                    allProjectsData[0]?.images &&
+                    allProjectsData[0].images.length > 0 && (
+                      <div>
+                        <img
+                          src={allProjectsData[0].images[0].imageUrl} // Accessing only the first image
+                          alt="Project First Image"
+                        />
+                      </div>
+                    )}
                   <div className="absolute top-0 right-0 p-6">
                     {allProjectsData && allProjectsData[0]?.isImportant && (
                       <FaStar className="w-6 h-6 text-yellow-400" />

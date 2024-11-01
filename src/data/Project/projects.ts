@@ -8,15 +8,25 @@ import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiLaragon, SiAndroidstudio } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
+//Capstone images
+import project_tubig from "@/assets/image/project_tubig.png";
+import project_tubig2 from "@/assets/image/project_tubig2.png";
+import project_tubig3 from "@/assets/image/project_tubig3.png";
+import project_tubig4 from "@/assets/image/project_tubig4.png";
+import project_tubig5 from "@/assets/image/project_tubig5.png";
+//Portfolio images
+import project_portfolio from "@/assets/image/project_portfolio.png";
+import project_portfolio2 from "@/assets/image/project_portfolio2.png";
+import project_portfolio3 from "@/assets/image/project_portfolio3.png";
+import project_portfolio4 from "@/assets/image/project_portfolio4.png";
+
 import project_pos from "@/assets/image/project_pos.png";
 import project_newsurge from "@/assets/image/project_newsurge.png";
 import project_dailyagenda from "@/assets/image/project_dailyagenda.png";
-import project_portfolio from "@/assets/image/project_portfolio.png";
 import project_joblisting from "@/assets/image/project_joblisting.png";
 import project_dailybudd from "@/assets/image/project_dailybudd.png";
 import project_jokes from "@/assets/image/project_jokes.png";
 import project_jalida from "@/assets/image/project_jalida.png";
-import project_tubig from "@/assets/image/project_tubig.png";
 import project_garboogle from "@/assets/image/project_garboogle.png";
 import project_moviewaze from "@/assets/image/project_moviewaze.png";
 
@@ -28,13 +38,16 @@ export interface TechStack {
 export interface Feature {
   featureDescription: string;
 }
+export interface Images {
+  imageUrl: string;
+}
 export interface Project {
   tag: string;
   id: string;
   isImportant: boolean;
   name: string;
   description: string;
-  image: string;
+  images?: Images[];
   githubRepo: string;
   liveDemo: string;
   techStack?: TechStack[];
@@ -49,7 +62,23 @@ const projectsData: Project[] = [
     name: "2big Web and Mobile App",
     description:
       "Capstone Project. This study aims to design and develop a platform to manage orders, deliveries, and inventory for water refilling stations.",
-    image: project_tubig,
+    images: [
+      {
+        imageUrl: project_tubig,
+      },
+      {
+        imageUrl: project_tubig2,
+      },
+      {
+        imageUrl: project_tubig3,
+      },
+      {
+        imageUrl: project_tubig4,
+      },
+      {
+        imageUrl: project_tubig5,
+      },
+    ],
     githubRepo: "https://github.com/jah09/2bigCustomerReporn",
     liveDemo: "",
     techStack: [
@@ -105,7 +134,20 @@ const projectsData: Project[] = [
     isImportant: true,
     name: "Portfolio Version 1",
     description: "Personal Project. This is my first version of portfolio",
-    image: project_portfolio,
+    images: [
+      {
+        imageUrl: project_portfolio,
+      },
+      {
+        imageUrl: project_portfolio2,
+      },
+      {
+        imageUrl: project_portfolio3,
+      },
+      {
+        imageUrl: project_portfolio4,
+      },
+    ],
     githubRepo: "https://github.com/jah09/2bigCustomerReporn",
     liveDemo: "",
     techStack: [
@@ -129,7 +171,11 @@ const projectsData: Project[] = [
     name: "Joblisting Revamp",
     description:
       "Intern Project. This project can add/display job. Create resume to use in job's application. Notification feature also available.",
-    image: project_joblisting,
+    images: [
+      {
+        imageUrl: project_joblisting,
+      },
+    ],
     githubRepo: "https://github.com/jah09/job-listing-revamp",
     liveDemo: "",
     techStack: [
@@ -179,7 +225,11 @@ const projectsData: Project[] = [
     name: "Pos System",
     description:
       "Intern Project. Merchant can add and display brand, product andPro category. Utilize the usage of S3 bucket.",
-    image: project_pos,
+    images: [
+      {
+        imageUrl: project_pos,
+      },
+    ],
     githubRepo: "",
     liveDemo: "",
     techStack: [
@@ -228,7 +278,11 @@ const projectsData: Project[] = [
     name: "Daily Routine Budd",
     description:
       "Personal project. Just like a ToDo list, that can add daily routine. Edit the item and can delete. Understanding also the react hooks.",
-    image: project_dailybudd,
+    images: [
+      {
+        imageUrl: project_dailybudd,
+      },
+    ],
     githubRepo: "https://github.com/jah09/dailyroutinebud",
     liveDemo: "https://jah09.github.io/dailyroutinebud/",
     techStack: [
@@ -256,7 +310,11 @@ const projectsData: Project[] = [
     name: "JalidaLand",
     description:
       "Personal project. Search your favorite movie. Also, a practice in how to use fetch in React. Understand the response from the API.",
-    image: project_jalida,
+    images: [
+      {
+        imageUrl: project_jalida,
+      },
+    ],
     githubRepo: "https://github.com/jah09/jalida",
     liveDemo: "https://jah09.github.io/jalida/",
     techStack: [
@@ -284,7 +342,11 @@ const projectsData: Project[] = [
     name: "Random Jokes",
     description:
       "Practice project. Generates a random jokes from Chuck Norries API. I used Tanstack Query to understand how to it works.",
-    image: project_jokes,
+    images: [
+      {
+        imageUrl: project_jokes,
+      },
+    ],
     githubRepo: "https://github.com/jah09/randomjokes",
     liveDemo: "https://jah09.github.io/randomjokes/",
     techStack: [
@@ -317,7 +379,11 @@ const projectsData: Project[] = [
     name: "MovieWaze",
     description:
       "Personal project. Search your favorite movie  and get the result. Understand the retrofit/REST API using Android Studio.",
-    image: project_moviewaze,
+    images: [
+      {
+        imageUrl: project_moviewaze,
+      },
+    ],
     githubRepo: "https://github.com/jah09/movie_wavez",
     liveDemo: "",
     techStack: [
@@ -350,7 +416,11 @@ const projectsData: Project[] = [
     name: "NewsSurge360",
     description:
       "Personal project. Search news, and get the result. Understand the REST API/Retrofit using Android Studio.",
-    image: project_newsurge,
+    images: [
+      {
+        imageUrl: project_newsurge,
+      },
+    ],
     githubRepo: "https://github.com/jah09/news_surge360",
     liveDemo: "",
     techStack: [
@@ -385,7 +455,11 @@ const projectsData: Project[] = [
     isImportant: false,
     name: "Garboogle",
     description: "Personal project.  Import different garbage article.",
-    image: project_garboogle,
+    images: [
+      {
+        imageUrl: project_garboogle,
+      },
+    ],
     githubRepo: "https://github.com/jah09/Garboogle",
     liveDemo: "",
     techStack: [
@@ -421,7 +495,11 @@ const projectsData: Project[] = [
     name: "Daily Agenda",
     description:
       "Personal project. ToDo list, can create, read, update and delete your ToDo items.",
-    image: project_dailyagenda,
+    images: [
+      {
+        imageUrl: project_dailyagenda,
+      },
+    ],
     githubRepo: "https://github.com/jah09/daily-agenda",
     liveDemo: "",
     techStack: [
