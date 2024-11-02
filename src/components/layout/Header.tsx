@@ -39,25 +39,34 @@ const Header = () => {
           <div className="max-sm:hidden sm:hidden  md:block">
             <ul className="flex gap-x-3 cursor-pointer  text-lg ">
               <li>
-                <Link to="/" className="text-foreground font-semibold tracking-wider ">
+                <Link
+                  to="/"
+                  className="text-foreground font-medium tracking-wider hover:bg-primary hover:text-black hover:rounded-md hover:py-1 hover:px-2"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-foreground  font-semibold tracking-wider ">
+                <Link
+                  to="/about"
+                  className="text-foreground  font-medium tracking-wider "
+                >
                   About
                 </Link>
               </li>
               <li>
                 <Link
                   to="/projects"
-                  className="text-foreground  font-semibold tracking-wider "
+                  className="text-foreground  font-medium tracking-wider "
                 >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-foreground  font-semibold tracking-wider ">
+                <Link
+                  to="/contact"
+                  className="text-foreground  font-medium tracking-wider "
+                >
                   Contact
                 </Link>
               </li>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { Card, CardContent } from "@/components/ui/card";
-import project_tubig from "@/assets/image/project_tubig.png";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import { useParams } from "react-router-dom";
@@ -12,12 +11,17 @@ import { FaStar } from "react-icons/fa";
 
 const ProjectDetails = () => {
   //States
+  const [isloading, setIsLoading] = useState<boolean>(false);
   const projectId = useParams()?.id;
   const [allProjectsData, setAllProjectsData] = useState<Project[]>();
   const [githubRepoLink, setGithubRepoLink] = useState<string>("");
   const [demoLink, setDemoLink] = useState<string>("");
 
   //Hooks
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     if (projectId) {
       const filteredProject = projectsData.filter((data: Project) => {
@@ -60,12 +64,29 @@ const ProjectDetails = () => {
             <div>
               <Card className=" mt-4 flex min-h-auto bg-background">
                 {/* Small Card Project Image */}
-                <div className="p-1 mr-2">
+                <div
+                  className={`p-1 mr-2 ${
+                    allProjectsData && allProjectsData[0]?.images?.length === 5
+                      ? ""
+                      : " overflow-y-auto scrollbar"
+                  } h-[505px] ${
+                    allProjectsData && allProjectsData[0]?.images?.length === 4
+                      ? "flex flex-col justify-center"
+                      : ""
+                  }`}
+                >
                   {allProjectsData &&
                     allProjectsData[0]?.images
                       ?.slice(1)
                       .map((imageItem, imageIndex) => (
-                        <Card className="bg-background mt-0.5" key={imageIndex}>
+                        <Card
+                          className={`bg-background ${
+                            allProjectsData[0]?.images?.length === 4
+                              ? "mt-2"
+                              : "mt-[6px]"
+                          } `}
+                          key={imageIndex}
+                        >
                           <CardContent className="rounded-none py-2 ">
                             <img
                               src={imageItem.imageUrl}
@@ -104,7 +125,7 @@ const ProjectDetails = () => {
             </div>
 
             {/* Project description */}
-            <div className="w-[49%] mt-4 h-[500px]  px-8 overflow-y-auto scrollbar">
+            <div className="w-[49%] mt-4 h-[500px]  px-8 scrollbar">
               <div className=" px-2 ">
                 <h1 className="font-medium text-foreground text-3xl">
                   {allProjectsData && allProjectsData[0].name}
