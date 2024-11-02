@@ -19,15 +19,49 @@ import project_portfolio from "@/assets/image/project_portfolio.png";
 import project_portfolio2 from "@/assets/image/project_portfolio2.png";
 import project_portfolio3 from "@/assets/image/project_portfolio3.png";
 import project_portfolio4 from "@/assets/image/project_portfolio4.png";
-
+//Joblisting portfolio
+import project_joblisting1 from "@/assets/image/project_joblisting1.png";
+import project_joblisting2 from "@/assets/image/project_joblisting2.png";
+import project_joblisting3 from "@/assets/image/project_joblisting3.png";
+import project_joblisting4 from "@/assets/image/project_joblisting4.png";
+import project_joblisting5 from "@/assets/image/project_joblisting5.png";
+import project_joblisting6 from "@/assets/image/project_joblisting6.png";
+//Pos project
 import project_pos from "@/assets/image/project_pos.png";
+import project_pos2 from "@/assets/image/project_pos2.png";
+import project_pos3 from "@/assets/image/project_pos3.png";
+import project_pos4 from "@/assets/image/project_pos4.png";
+import project_pos5 from "@/assets/image/project_pos5.png";
+import project_pos6 from "@/assets/image/project_pos6.png";
+//NewSurge
 import project_newsurge from "@/assets/image/project_newsurge.png";
+import project_newsurge2 from "@/assets/image/project_newsurge2.png";
+import project_newsurge3 from "@/assets/image/project_newsurge3.png";
+import project_newsurge4 from "@/assets/image/project_newsurge4.png";
+import project_newsurge5 from "@/assets/image/project_newsurge5.png";
+//Garboogle
+import project_garboogle from "@/assets/image/project_garboogle.png";
+import project_garboogle2 from "@/assets/image/project_garboogle2.png";
+import project_garboogle3 from "@/assets/image/project_garboogle3.png";
+import project_garboogle4 from "@/assets/image/project_garboogle4.png";
+import project_garboogle5 from "@/assets/image/project_garboogle5.png";
+import project_garboogle6 from "@/assets/image/project_garboogle6.png";
+import project_garboogle7 from "@/assets/image/project_garboogle7.png";
+//Daily Agenda
 import project_dailyagenda from "@/assets/image/project_dailyagenda.png";
-import project_joblisting from "@/assets/image/project_joblisting.png";
+import project_dailyagenda2 from "@/assets/image/project_dailyagenda2.png";
+import project_dailyagenda3 from "@/assets/image/project_dailyagenda3.png";
+import project_dailyagenda4 from "@/assets/image/project_dailyagenda4.png";
+import project_dailyagenda5 from "@/assets/image/project_dailyagenda5.png";
+import project_dailyagenda6 from "@/assets/image/project_dailyagenda6.png";
+import project_dailyagenda7 from "@/assets/image/project_dailyagenda7.png";
+import project_dailyagenda8 from "@/assets/image/project_dailyagenda8.png";
+import project_dailyagenda9 from "@/assets/image/project_dailyagenda9.png";
+ 
+
 import project_dailybudd from "@/assets/image/project_dailybudd.png";
 import project_jokes from "@/assets/image/project_jokes.png";
 import project_jalida from "@/assets/image/project_jalida.png";
-import project_garboogle from "@/assets/image/project_garboogle.png";
 import project_moviewaze from "@/assets/image/project_moviewaze.png";
 
 export interface TechStack {
@@ -173,7 +207,22 @@ const projectsData: Project[] = [
       "Intern Project. This project can add/display job. Create resume to use in job's application. Notification feature also available.",
     images: [
       {
-        imageUrl: project_joblisting,
+        imageUrl: project_joblisting1,
+      },
+      {
+        imageUrl: project_joblisting2,
+      },
+      {
+        imageUrl: project_joblisting3,
+      },
+      {
+        imageUrl: project_joblisting4,
+      },
+      {
+        imageUrl: project_joblisting5,
+      },
+      {
+        imageUrl: project_joblisting6,
       },
     ],
     githubRepo: "https://github.com/jah09/job-listing-revamp",
@@ -228,6 +277,21 @@ const projectsData: Project[] = [
     images: [
       {
         imageUrl: project_pos,
+      },
+      {
+        imageUrl: project_pos2,
+      },
+      {
+        imageUrl: project_pos3,
+      },
+      {
+        imageUrl: project_pos4,
+      },
+      {
+        imageUrl: project_pos5,
+      },
+      {
+        imageUrl: project_pos6,
       },
     ],
     githubRepo: "",
@@ -418,7 +482,19 @@ const projectsData: Project[] = [
       "Personal project. Search news, and get the result. Understand the REST API/Retrofit using Android Studio.",
     images: [
       {
+        imageUrl: project_newsurge2,
+      },
+      {
         imageUrl: project_newsurge,
+      },
+      {
+        imageUrl: project_newsurge3,
+      },
+      {
+        imageUrl: project_newsurge4,
+      },
+      {
+        imageUrl: project_newsurge5,
       },
     ],
     githubRepo: "https://github.com/jah09/news_surge360",
@@ -459,6 +535,24 @@ const projectsData: Project[] = [
       {
         imageUrl: project_garboogle,
       },
+      {
+        imageUrl: project_garboogle2,
+      },
+      {
+        imageUrl: project_garboogle3,
+      },
+      {
+        imageUrl: project_garboogle4,
+      },
+      {
+        imageUrl: project_garboogle5,
+      },
+      {
+        imageUrl: project_garboogle6,
+      },
+      {
+        imageUrl: project_garboogle7,
+      },
     ],
     githubRepo: "https://github.com/jah09/Garboogle",
     liveDemo: "",
@@ -498,6 +592,30 @@ const projectsData: Project[] = [
     images: [
       {
         imageUrl: project_dailyagenda,
+      },
+      {
+        imageUrl: project_dailyagenda2,
+      },
+      {
+        imageUrl: project_dailyagenda3,
+      },
+      {
+        imageUrl: project_dailyagenda4,
+      },
+      {
+        imageUrl: project_dailyagenda9,
+      },
+      {
+        imageUrl: project_dailyagenda5,
+      },
+      {
+        imageUrl: project_dailyagenda6,
+      },
+      {
+        imageUrl: project_dailyagenda7,
+      },
+      {
+        imageUrl: project_dailyagenda8,
       },
     ],
     githubRepo: "https://github.com/jah09/daily-agenda",

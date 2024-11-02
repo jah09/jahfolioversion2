@@ -98,7 +98,6 @@ const Projects = () => {
             <div className="lg:grid lg:grid-cols-3 gap-4">
               {passedProjectsData &&
                 passedProjectsData.map((item, index: number) => {
-                  console.log("item",item)
                   return (
                     <Card
                       className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300"
@@ -116,7 +115,6 @@ const Projects = () => {
                             )}
                           </div>
                         )}
-                       
                       </CardContent>
                       <CardContent className="py-4 flex items-center justify-between">
                         <h1 className="text-xl">{item?.name}</h1>
@@ -126,7 +124,7 @@ const Projects = () => {
                       </CardContent>
                       <CardFooter className="flex justify-between py-4 mt-4">
                         <div className="flex space-x-2">
-                          {item?.techStack?.map((tech, techIndex) =>
+                          {item?.techStack?.map((tech, techIndex:number) =>
                             tech.icon ? (
                               <div key={techIndex}>
                                 <tech.icon className="h-5 w-5 text-foreground" />

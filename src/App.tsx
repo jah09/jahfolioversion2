@@ -6,8 +6,8 @@ import About from "@/pages/About/index";
 import Contact from "@/pages/Contact";
 import Project from "@/pages/Project/index";
 import ProjectDetails from "@/pages/Project/ProjectDetails";
-
 import "ldrs/helix";
+
 function App() {
   const [count, setCount] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(true);
