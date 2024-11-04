@@ -54,7 +54,7 @@ export const experiences: Experience[] = [
     jobTitle: "Software Engineer",
     company: "CLI",
     jobDescription:
-      "My primary focus is on full stack web development specifically creating real estate websites  Unfortunately I cant share more details due to NDA.",
+      "My primary focus is on full-stack web development, particularly building websites for internal company use..  Unfortunately I cant share more details due to NDA.",
     techStack: [
       {
         icon: FaLaravel,

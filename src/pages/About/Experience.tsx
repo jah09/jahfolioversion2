@@ -112,14 +112,13 @@ const Experience = () => {
           </div>
           <div className=" w-2/5  p-2 flex flex-col justify-center ml-4">
             <h1 className="text-foreground text-[42px] font-medium tracking-wider   ">
-              Journey
+              Experience
             </h1>
             <p className="text-foreground text-lg  tracking-wide">
-              This timeline illustrates my journey from the start of my studies
-              through my internship experience, culminating in my successful
-              transition into the workforce. It highlights the key milestones
-              and achievements I've reached along the way, showcasing my growth
-              and development in both my academic and professional endeavors.
+              This timeline shows my journey from the start of my studies,
+              through my internship, to landing my first job. It highlights
+              important milestones and achievements, showing how I've grown and
+              developed in both my studies and career.
             </p>
           </div>
         </div>

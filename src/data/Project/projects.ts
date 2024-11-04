@@ -73,6 +73,7 @@ export interface Feature {
   featureDescription: string;
 }
 export interface Images {
+  id: string;
   imageUrl: string;
 }
 export interface Project {
@@ -98,18 +99,23 @@ const projectsData: Project[] = [
       "Capstone Project. This study aims to design and develop a platform to manage orders, deliveries, and inventory for water refilling stations.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_tubig,
       },
       {
+        id: uuid(),
         imageUrl: project_tubig2,
       },
       {
+        id: uuid(),
         imageUrl: project_tubig3,
       },
       {
+        id: uuid(),
         imageUrl: project_tubig4,
       },
       {
+        id: uuid(),
         imageUrl: project_tubig5,
       },
     ],
@@ -170,15 +176,19 @@ const projectsData: Project[] = [
     description: "Personal Project. This is my first version of portfolio",
     images: [
       {
+        id: uuid(),
         imageUrl: project_portfolio,
       },
       {
+        id: uuid(),
         imageUrl: project_portfolio2,
       },
       {
+        id: uuid(),
         imageUrl: project_portfolio3,
       },
       {
+        id: uuid(),
         imageUrl: project_portfolio4,
       },
     ],
@@ -207,21 +217,27 @@ const projectsData: Project[] = [
       "Intern Project. This project can add/display job. Create resume to use in job's application. Notification feature also available.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_joblisting1,
       },
       {
+        id: uuid(),
         imageUrl: project_joblisting2,
       },
       {
+        id: uuid(),
         imageUrl: project_joblisting3,
       },
       {
+        id: uuid(),
         imageUrl: project_joblisting4,
       },
       {
+        id: uuid(),
         imageUrl: project_joblisting5,
       },
       {
+        id: uuid(),
         imageUrl: project_joblisting6,
       },
     ],
@@ -276,21 +292,27 @@ const projectsData: Project[] = [
       "Intern Project. Merchant can add and display brand, product andPro category. Utilize the usage of S3 bucket.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_pos,
       },
       {
+        id: uuid(),
         imageUrl: project_pos2,
       },
       {
+        id: uuid(),
         imageUrl: project_pos3,
       },
       {
+        id: uuid(),
         imageUrl: project_pos4,
       },
       {
+        id: uuid(),
         imageUrl: project_pos5,
       },
       {
+        id: uuid(),
         imageUrl: project_pos6,
       },
     ],
@@ -344,6 +366,7 @@ const projectsData: Project[] = [
       "Personal project. Just like a ToDo list, that can add daily routine. Edit the item and can delete. Understanding also the react hooks.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_dailybudd,
       },
     ],
@@ -376,6 +399,7 @@ const projectsData: Project[] = [
       "Personal project. Search your favorite movie. Also, a practice in how to use fetch in React. Understand the response from the API.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_jalida,
       },
     ],
@@ -408,6 +432,7 @@ const projectsData: Project[] = [
       "Practice project. Generates a random jokes from Chuck Norries API. I used Tanstack Query to understand how to it works.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_jokes,
       },
     ],
@@ -445,6 +470,7 @@ const projectsData: Project[] = [
       "Personal project. Search your favorite movie  and get the result. Understand the retrofit/REST API using Android Studio.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_moviewaze,
       },
     ],
@@ -482,18 +508,23 @@ const projectsData: Project[] = [
       "Personal project. Search news, and get the result. Understand the REST API/Retrofit using Android Studio.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_newsurge2,
       },
       {
+        id: uuid(),
         imageUrl: project_newsurge,
       },
       {
+        id: uuid(),
         imageUrl: project_newsurge3,
       },
       {
+        id: uuid(),
         imageUrl: project_newsurge4,
       },
       {
+        id: uuid(),
         imageUrl: project_newsurge5,
       },
     ],
@@ -533,24 +564,31 @@ const projectsData: Project[] = [
     description: "Personal project.  Import different garbage article.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_garboogle,
       },
       {
+        id: uuid(),
         imageUrl: project_garboogle2,
       },
       {
+        id: uuid(),
         imageUrl: project_garboogle3,
       },
       {
+        id: uuid(),
         imageUrl: project_garboogle4,
       },
       {
+        id: uuid(),
         imageUrl: project_garboogle5,
       },
       {
+        id: uuid(),
         imageUrl: project_garboogle6,
       },
       {
+        id: uuid(),
         imageUrl: project_garboogle7,
       },
     ],
@@ -591,30 +629,39 @@ const projectsData: Project[] = [
       "Personal project. ToDo list, can create, read, update and delete your ToDo items.",
     images: [
       {
+        id: uuid(),
         imageUrl: project_dailyagenda,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda2,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda3,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda4,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda9,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda5,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda6,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda7,
       },
       {
+        id: uuid(),
         imageUrl: project_dailyagenda8,
       },
     ],

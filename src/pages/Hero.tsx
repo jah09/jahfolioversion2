@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 import HeroBlob from "@/components/HeroBlob";
@@ -6,6 +6,10 @@ import { BsDiscord } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
+  //Hooks
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className=" min-h-screen   bg-background ">
       <div className=" lg:flex  md:flex items-center lg:px-20">

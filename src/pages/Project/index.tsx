@@ -4,51 +4,56 @@ import { FaStar } from "react-icons/fa";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import projectsData from "@/data/Project/projects";
 import { Link } from "react-router-dom";
-
+import { TechStack } from "@/data/Project/projects";
+import { TECH_TAGS } from "@/data/constants/data/tags";
 const Projects = () => {
   const [selectedTag, setSelectedTag] = useState<string>("all");
   const ref = useRef<HTMLDivElement>(null);
   const [passedProjectsData, setPassedProjectData] =
     useState<object>(projectsData);
-  const tag = [
-    {
-      name: "All",
-      tag: "all",
-    },
-    {
-      name: "ReactJs",
-      tag: "reactjs",
-    },
-    {
-      name: "Laravel",
-      tag: "laravel",
-    },
-    {
-      name: "React Native",
-      tag: "reactnative",
-    },
-    {
-      name: "VueJs",
-      tag: "vuejs",
-    },
-    {
-      name: "Firebase",
-      tag: "firebase",
-    },
-    {
-      name: "MySQL",
-      tag: "mysql",
-    },
-    {
-      name: "Mobile",
-      tag: "mobile",
-    },
-    {
-      name: "Web",
-      tag: "web",
-    },
-  ];
+  // const tag = [
+  //   {
+  //     name: "All",
+  //     tag: "all",
+  //   },
+  //   {
+  //     name: "ReactJs",
+  //     tag: "reactjs",
+  //   },
+  //   {
+  //     name: "Laravel",
+  //     tag: "laravel",
+  //   },
+  //   {
+  //     name: "React Native",
+  //     tag: "reactnative",
+  //   },
+  //   {
+  //     name: "VueJs",
+  //     tag: "vuejs",
+  //   },
+  //   {
+  //     name: "Firebase",
+  //     tag: "firebase",
+  //   },
+  //   {
+  //     name: "MySQL",
+  //     tag: "mysql",
+  //   },
+  //   {
+  //     name: "Mobile",
+  //     tag: "mobile",
+  //   },
+  //   {
+  //     name: "Web",
+  //     tag: "web",
+  //   },
+  // ];
+  const [tags, setTags] = useState<object>(TECH_TAGS);
 
+  /**
+   * When the selectedTag changes, the passedProjectData will be set to the filtered <data value="Project[]">
+   */
   useEffect(() => {
     if (selectedTag === "all") {
       setPassedProjectData(projectsData);
@@ -76,7 +81,7 @@ const Projects = () => {
 
           <div className="">
             <ul className="flex space-x-3 mt-2">
-              {tag.map((item, index) => {
+              {tags && Object.values(tags).map((item, index: number) => {
                 return (
                   <li
                     className={`${
@@ -94,59 +99,57 @@ const Projects = () => {
                 );
               })}
             </ul>
+            
             {/* Projects here */}
             <div className="lg:grid lg:grid-cols-3 gap-4">
               {passedProjectsData &&
-                passedProjectsData.map((item, index: number) => {
-                  return (
-                    <Card
-                      className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300"
-                      key={index}
-                    >
-                      <CardContent className="rounded-xl mx-2  p-0 mt-1">
-                        {item.images && item.images.length > 0 && (
-                          <div>
-                            {item.images && item.images[0] && (
-                              <img
-                                src={item.images[0].imageUrl} // Accessing only the first image
-                                alt={`Project ${index} First Image`} // Alt text for accessibility
-                                style={{ width: "100%", height: "auto" }} // Adjust styles as needed
-                              />
-                            )}
-                          </div>
-                        )}
-                      </CardContent>
-                      <CardContent className="py-4 flex items-center justify-between">
-                        <h1 className="text-xl">{item?.name}</h1>
-                        {item?.isImportant && (
-                          <FaStar className="w-6 h-6 text-yellow-400" />
-                        )}
-                      </CardContent>
-                      <CardFooter className="flex justify-between py-4 mt-4">
-                        <div className="flex space-x-2">
-                          {item?.techStack?.map((tech, techIndex:number) =>
+                Object.values(passedProjectsData).map((item, index) => (
+                  <Card
+                    className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
+                    key={index}
+                  >
+                    <CardContent className="rounded-xl mx-2 p-0 mt-1">
+                      {item.images && item.images.length > 0 && (
+                        <div>
+                          <img
+                            src={item.images[0].imageUrl} // Accessing only the first image
+                            alt={`Project ${index} First Image`} // Alt text for accessibility
+                            style={{ width: "100%", height: "auto" }} // Adjust styles as needed
+                          />
+                        </div>
+                      )}
+                    </CardContent>
+                    <CardContent className="py-4 flex items-center justify-between">
+                      <h1 className="text-xl">{item?.name}</h1>
+                      {item?.isImportant && (
+                        <FaStar className="w-6 h-6 text-yellow-400" />
+                      )}
+                    </CardContent>
+                    <CardFooter className="flex justify-between py-4 mt-4">
+                      <div className="flex space-x-2">
+                        {item?.techStack?.map(
+                          (tech: TechStack, techIndex: number) =>
                             tech.icon ? (
                               <div key={techIndex}>
                                 <tech.icon className="h-5 w-5 text-foreground" />
                               </div>
                             ) : null
-                          )}
-                        </div>
-                        <Link to={`/project-details/${item.id}`}>
-                          <button
-                            className="align-middle select-none font-sans font-bold text-center uppercase disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-1.5 px-2 rounded-lg bg-primaryForeground shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none flex items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
-                            type="button"
-                          >
-                            <span className="text-foreground tracking-wide">
-                              Read More
-                            </span>
-                            <IoIosArrowRoundForward className="w-8 h-8 text-foreground" />
-                          </button>
-                        </Link>
-                      </CardFooter>
-                    </Card>
-                  );
-                })}
+                        )}
+                      </div>
+                      <Link to={`/project-details/${item.id}`}>
+                        <button
+                          className="align-middle select-none font-sans font-bold text-center uppercase disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-1.5 px-2 rounded-lg bg-primaryForeground shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none flex items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
+                          type="button"
+                        >
+                          <span className="text-foreground tracking-wide">
+                            Read More
+                          </span>
+                          <IoIosArrowRoundForward className="w-8 h-8 text-foreground" />
+                        </button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                ))}
             </div>
           </div>
         </div>

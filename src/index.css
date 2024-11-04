@@ -72,6 +72,8 @@ body * {
   body.dark-mode {
     --foreground: hsl(222.2, 84%, 4.9%);
   }
+
+  /* Scrollbar */
   .scrollbar::-webkit-scrollbar {
     width: 8px;
     height: 15px;
@@ -85,12 +87,7 @@ body * {
   .scrollbar::-webkit-scrollbar-thumb {
     background: var(--accent);
     border-radius: 100vh;
-   
   }
-
-  /* .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: green;
-  } */
 }
 
 /*Hero Section */
@@ -124,3 +121,60 @@ body * {
     );
   }
 }
+
+/* Header */
+
+.navbarLink:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #72787e;
+
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out, border-color 250ms ease-in-out;
+}
+.navbarLink.active:after,
+.navbarLink:hover:after {
+  transform: scaleX(1);
+  border-color: #72787e;
+}
+
+nav.stroke ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after
+ {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: var(--muted-foreground);
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 80%;
+}
+nav {
+  /* width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede; */
+  margin: 0 auto;
+}
+nav ul li a {
+  /* display: block; */
+  padding: 5px;
+  text-decoration: none;
+  color: #aaa;
+  /* font-weight: 800; */
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+ 
