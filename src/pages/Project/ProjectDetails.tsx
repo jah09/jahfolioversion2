@@ -11,17 +11,29 @@ import { FaStar } from "react-icons/fa";
 
 const ProjectDetails = () => {
   //States
-  const [isloading, setIsLoading] = useState<boolean>(false);
   const projectId = useParams()?.id;
   const [allProjectsData, setAllProjectsData] = useState<Project[]>();
   const [githubRepoLink, setGithubRepoLink] = useState<string>("");
   const [demoLink, setDemoLink] = useState<string>("");
+  const [mainImageUrl, setMainImageUrl] = useState("");
 
   //Hooks
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
+  /**
+   * First load of the component, the main image is set to the first image(index 0) of the project
+   */
+  useEffect(() => {
+    if (allProjectsData && allProjectsData[0]?.images?.[0]?.imageUrl) {
+      setMainImageUrl(allProjectsData[0].images[0].imageUrl);
+    }
+  }, [allProjectsData]);
+
+  /**
+   * When the projectId changes, the component will fetch the data from the database
+   */
   useEffect(() => {
     if (projectId) {
       const filteredProject = projectsData.filter((data: Project) => {
@@ -31,6 +43,9 @@ const ProjectDetails = () => {
     }
   }, [projectId]);
 
+  /**
+   * When the component is loaded, the githubRepoLink and demoLink will be set to the first project's data
+   */
   useEffect(() => {
     if (allProjectsData) {
       setGithubRepoLink(allProjectsData[0].githubRepo);
@@ -45,6 +60,14 @@ const ProjectDetails = () => {
     } else {
       window.open(path, "_blank", "noreferrer");
     }
+  };
+  
+  /**
+   * When the image is clicked, the mainImageUrl will be set to the clicked image
+   */
+  const handleClickImage = (imageUrl: string) => {
+    console.log(imageUrl);
+    setMainImageUrl(imageUrl);
   };
 
   return (
@@ -86,6 +109,7 @@ const ProjectDetails = () => {
                               : "mt-[6px]"
                           } `}
                           key={imageIndex}
+                          onClick={() => handleClickImage(imageItem.imageUrl)}
                         >
                           <CardContent className="rounded-none py-2 ">
                             <img
@@ -97,6 +121,7 @@ const ProjectDetails = () => {
                         </Card>
                       ))}
                 </div>
+
                 {/* Main Card Project Image */}
                 <div
                   className={` w-full flex items-center relative ${
@@ -105,16 +130,11 @@ const ProjectDetails = () => {
                       : ""
                   }`}
                 >
-                  {allProjectsData &&
-                    allProjectsData[0]?.images &&
-                    allProjectsData[0].images.length > 0 && (
-                      <div>
-                        <img
-                          src={allProjectsData[0].images[0].imageUrl} // Accessing only the first image
-                          alt="Project First Image"
-                        />
-                      </div>
-                    )}
+                  {mainImageUrl && (
+                    <div>
+                      <img src={mainImageUrl} alt="Main Project Image" />
+                    </div>
+                  )}
                   <div className="absolute top-0 right-0 p-6">
                     {allProjectsData && allProjectsData[0]?.isImportant && (
                       <FaStar className="w-6 h-6 text-yellow-400" />

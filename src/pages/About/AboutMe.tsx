@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Skill from "@/pages/About/Skill";
 import Certification from '@/pages/About/Certification'
 import aboutImageOne from "@/assets/image/aboutImageOne.jpeg";
 import aboutImageTwo from "@/assets/image/aboutImageTwo.jpeg";
 
 const About = () => {
+  //Hooks
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <section className=" bg-background   ">
       <div className=" lg:px-20  min-h-screen ">

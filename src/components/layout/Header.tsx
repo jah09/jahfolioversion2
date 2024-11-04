@@ -36,12 +36,12 @@ const Header = () => {
         <div className="flex justify-between items-center   md:px-2 max-sm:px-2 z-50 ">
           <div>Icon </div>
           {/*Navbar menu  max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500*/}
-          <div className="max-sm:hidden sm:hidden  md:block">
-            <ul className="flex gap-x-3 cursor-pointer  text-lg ">
+          <nav className="max-sm:hidden sm:hidden  md:block stroke">
+            <ul className="flex gap-x-4 cursor-pointer  text-lg">
               <li>
                 <Link
                   to="/"
-                  className="text-foreground font-medium tracking-wider hover:bg-primary hover:text-black hover:rounded-md hover:py-1 hover:px-2"
+                  className="text-foreground font-medium tracking-wider  "
                 >
                   Home
                 </Link>
@@ -71,7 +71,7 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
           <div className="max-sm:hidden sm:hidden md:block">
             <div className="flex gap-x-2">
               <button className="">
