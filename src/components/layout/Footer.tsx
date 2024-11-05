@@ -5,6 +5,21 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import gmail from "@/assets/svg/gmail.svg";
 const Footer = () => {
+  //Event Handler
+  const handleSocmedButton = (buttonType: string) => {
+    if (buttonType === "linkedin") {
+      window.open(
+        "https://www.linkedin.com/in/jeahael-suhot-268314280",
+        "_blank",
+        "noreferrer"
+      );
+    } else {
+       window.location.href =
+         "mailto:jlsuhot@gmail.com?subject=Contact from portfolio";
+      // TODO:// Add discord link
+      // window.open("https://discord.com/.duck09", "_blank", "noreferrer");
+    }
+  };
   return (
     <section className="">
       {/* max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500*/}
@@ -15,7 +30,10 @@ const Footer = () => {
 
         <div className="md:flex-col md:flex items-center  max-sm:hidden sm:hidden">
           <h1 className="font-semibold text-foreground">Contact me 🚀</h1>
-          <p className="tracking-wider flex gap-x-1 items-center text-foreground ">
+          <p
+            className="tracking-wider flex gap-x-1 items-center text-foreground cursor-pointer"
+            onClick={() => handleSocmedButton("linkedin")}
+          >
             <span>
               <FaLinkedin
                 className="w-5 h-5 cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
@@ -24,7 +42,10 @@ const Footer = () => {
             </span>
             LinkedIn
           </p>
-          <p className="tracking-wider flex gap-x-1 items-center text-foreground ">
+          <p
+            className="tracking-wider flex gap-x-1 items-center text-foreground cursor-pointer"
+            onClick={() => handleSocmedButton("gmail")}
+          >
             <span>
               <img src={gmail} alt="" className="h-5 w-5  " />
             </span>

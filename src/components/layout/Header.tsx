@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../ui/button";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import { RiMoonClearFill } from "react-icons/ri";
@@ -39,36 +39,52 @@ const Header = () => {
           <nav className="max-sm:hidden sm:hidden  md:block stroke">
             <ul className="flex gap-x-4 cursor-pointer  text-lg">
               <li>
-                <Link
+                <NavLink
                   to="/"
-                  className="text-foreground font-medium tracking-wider  "
+                  className={({ isActive }) =>
+                    `font-medium tracking-wider text-foreground ${
+                      isActive ? "active" : "text-mutedForeground"
+                    }`
+                  }
                 >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/about"
-                  className="text-foreground  font-medium tracking-wider "
+                  className={({ isActive }) =>
+                    `font-medium tracking-wider text-foreground ${
+                      isActive ? "active" : "text-mutedForeground"
+                    }`
+                  }
                 >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/projects"
-                  className="text-foreground  font-medium tracking-wider "
+                  className={({ isActive }) =>
+                    `font-medium tracking-wider text-foreground ${
+                      isActive ? "active" : "text-mutedForeground"
+                    }`
+                  }
                 >
                   Projects
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/contact"
-                  className="text-foreground  font-medium tracking-wider "
+                  className={({ isActive }) =>
+                    `font-medium tracking-wider text-foreground ${
+                      isActive ? "active" : "text-mutedForeground"
+                    }`
+                  }
                 >
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -138,30 +154,33 @@ const Header = () => {
                 <h1 className="text-foreground text-xl font-bold">Menu</h1>
                 <ul className="  gap-x-3 cursor-pointer  text-lg mt-6">
                   <li>
-                    <Link to="/" className="text-foreground font-medium ">
+                    <NavLink to="/" className="text-foreground font-medium ">
                       Home
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link to="/about" className="text-foreground  font-medium ">
+                    <NavLink
+                      to="/about"
+                      className="text-foreground  font-medium "
+                    >
                       About
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link
+                    <NavLink
                       to="/projects"
                       className="text-foreground  font-medium "
                     >
                       Projects
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link
+                    <NavLink
                       to="/contact"
                       className="text-foreground  font-medium "
                     >
                       Contact
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </div>

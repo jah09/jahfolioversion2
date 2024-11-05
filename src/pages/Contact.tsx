@@ -4,6 +4,13 @@ import { MdEmail } from "react-icons/md";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaMapLocationDot } from "react-icons/fa6";
 const Contact = () => {
+  //Event handler
+  const handleContact = (buttonType: string) => {
+    if (buttonType === "email") {
+      window.location.href =
+        "mailto:jlsuhot@gmail.com?subject=Contact from portfolio";
+    }
+  };
   return (
     <section className=" bg-background">
       <div className="lg:px-20 min-h-screen">
@@ -18,11 +25,17 @@ const Contact = () => {
               </h1>
               <div className="mt-10">
                 {/* Email */}
-                <div className="flex space-x-3 py-1">
+                <div
+                  className="flex space-x-3 py-1 cursor-pointer"
+                  onClick={() => handleContact("email")}
+                >
                   <span>
                     <MdEmail className="w-8 h-8 text-foreground items-center" />
                   </span>
-                  <label htmlFor="" className="text-foreground text-xl">
+                  <label
+                    htmlFor=""
+                    className="text-foreground text-xl cursor-pointer"
+                  >
                     jlsuhot@gmail.com
                   </label>
                 </div>

@@ -6,50 +6,19 @@ import projectsData from "@/data/Project/projects";
 import { Link } from "react-router-dom";
 import { TechStack } from "@/data/Project/projects";
 import { TECH_TAGS } from "@/data/constants/data/tags";
+
 const Projects = () => {
+  //States
   const [selectedTag, setSelectedTag] = useState<string>("all");
   const ref = useRef<HTMLDivElement>(null);
   const [passedProjectsData, setPassedProjectData] =
     useState<object>(projectsData);
-  // const tag = [
-  //   {
-  //     name: "All",
-  //     tag: "all",
-  //   },
-  //   {
-  //     name: "ReactJs",
-  //     tag: "reactjs",
-  //   },
-  //   {
-  //     name: "Laravel",
-  //     tag: "laravel",
-  //   },
-  //   {
-  //     name: "React Native",
-  //     tag: "reactnative",
-  //   },
-  //   {
-  //     name: "VueJs",
-  //     tag: "vuejs",
-  //   },
-  //   {
-  //     name: "Firebase",
-  //     tag: "firebase",
-  //   },
-  //   {
-  //     name: "MySQL",
-  //     tag: "mysql",
-  //   },
-  //   {
-  //     name: "Mobile",
-  //     tag: "mobile",
-  //   },
-  //   {
-  //     name: "Web",
-  //     tag: "web",
-  //   },
-  // ];
   const [tags, setTags] = useState<object>(TECH_TAGS);
+
+  //Hooks
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   /**
    * When the selectedTag changes, the passedProjectData will be set to the filtered <data value="Project[]">
@@ -81,25 +50,26 @@ const Projects = () => {
 
           <div className="">
             <ul className="flex space-x-3 mt-2">
-              {tags && Object.values(tags).map((item, index: number) => {
-                return (
-                  <li
-                    className={`${
-                      selectedTag === item?.tag
-                        ? "bg-accent border border-accent  "
-                        : "border border-accent "
-                    } text-foreground px-5 py-1 rounded-full cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 hover:bg-accent`}
-                    key={index}
-                    onClick={() => {
-                      setSelectedTag(item?.tag);
-                    }}
-                  >
-                    {item.name}
-                  </li>
-                );
-              })}
+              {tags &&
+                Object.values(tags).map((item, index: number) => {
+                  return (
+                    <li
+                      className={`${
+                        selectedTag === item?.tag
+                          ? "bg-accent border border-accent  "
+                          : "border border-accent "
+                      } text-foreground px-5 py-1 rounded-full cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 hover:bg-accent`}
+                      key={index}
+                      onClick={() => {
+                        setSelectedTag(item?.tag);
+                      }}
+                    >
+                      {item.name}
+                    </li>
+                  );
+                })}
             </ul>
-            
+
             {/* Projects here */}
             <div className="lg:grid lg:grid-cols-3 gap-4">
               {passedProjectsData &&
