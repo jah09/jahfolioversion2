@@ -16,7 +16,7 @@ const Certification = () => {
     <section>
       <div className="lg:px-20  min-h-screen  bg-background">
         <div className="py-[50px] ">
-          <div className="flex flex-row mx-20   ">
+          <div className="flex flex-row mx-10">
             <div className=" w-1/2 flex justify-center  flex-col  mx-4">
               <h1 className="text-foreground text-[42px] font-medium tracking-wider  ">
                 Certifications

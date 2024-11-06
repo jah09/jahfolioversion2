@@ -51,7 +51,7 @@ export interface TechStack {
 export const experiences: Experience[] = [
   {
     date: "Oct 10, 2024",
-    jobTitle: "Software Engineer",
+    jobTitle: "Web Developer",
     company: "CLI",
     jobDescription:
       "My primary focus is on full-stack web development, particularly building websites for internal company use..  Unfortunately I cant share more details due to NDA.",

@@ -13,10 +13,10 @@ const About = () => {
     <section className="bg-background">
       <div className="lg:px-20  min-h-screen">
         <div className="py-20">
-          <div className="mx-20  bg-red-900 flex">
+          <div className="max-sm:mx-4 sm:mx-4 mx-20 md:flex md:flex-row   max-sm:flex max-sm:flex-col-reverse sm:flex  sm:flex-col-reverse">
             {/* Description */}
-            <div className=" w-1/2 flex flex-col justify-center bg-blue-900">
-              <h1 className="text-foreground text-5xl font-medium tracking-wider max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500 xl:bg-violet-500 ">
+            <div className="max-sm:w-full sm:w-full w-1/2 flex flex-col justify-center max-sm:mt-[50px] sm:mt-[50px] md:mt-0">
+              <h1 className="text-foreground text-5xl font-medium tracking-wider  ">
                 So, who am I?
               </h1>
               <p className="text-foreground text-lg py-2 tracking-wider">
@@ -30,17 +30,11 @@ const About = () => {
                   "The core of beauty is simplicity."
                 </span>
               </p>
-              {/* <p className="text-foreground text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                quos sunt quam, adipisci eaque voluptatum animi laudantium
-                magnam nemo commodi laborum fuga sequi facere alias minus
-                assumenda amet rerum exercitationem.
-              </p> */}
             </div>
 
             {/* Image */}
-            <div className=" w-1/2 flex justify-center ml-20 bg-green-900">
-              <div className="relative group">
+            <div className="max-sm:w-full md:w-full flex justify-center">
+              <div className="relative group ">
                 <div className="rounded-md bg-accentForeground p-0.5 origin-top rotate-[5deg] hover:skew-y-2  z-20 relative  group-hover:z-10 transition-all duration-300 ease-in-out">
                   <img
                     src={aboutImageOne}
