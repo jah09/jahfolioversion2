@@ -34,7 +34,9 @@ const Header = () => {
     <nav className=" fixed top-0 w-full z-50">
       <div className="p-3   shadow-sm shadow-accent  bg-background   w-full lg:px-[80px] xl:px-[100px] md:px-2  ">
         <div className="flex justify-between items-center   md:px-2 max-sm:px-2 z-50 ">
-          <div>Icon </div>
+          <div className="max-sm:bg-red-500 sm:bg-blue-500 md:bg-green-500 lg:bg-orange-500 xl:bg-violet-500">
+            Icon{" "}
+          </div>
           {/*Navbar menu  max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500*/}
           <nav className="max-sm:hidden sm:hidden  md:block stroke">
             <ul className="flex gap-x-4 cursor-pointer  text-lg">
