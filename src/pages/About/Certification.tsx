@@ -16,7 +16,8 @@ const Certification = () => {
     <section>
       <div className="lg:px-20  min-h-screen  bg-background">
         <div className="py-[50px] ">
-          <div className="flex flex-row mx-10">
+          {/* Web View */}
+          <div className="md:flex md:flex-row mx-10 max-sm:hidden sm:hidden">
             <div className=" w-1/2 flex justify-center  flex-col  mx-4">
               <h1 className="text-foreground text-[42px] font-medium tracking-wider  ">
                 Certifications
@@ -49,6 +50,7 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
+
                 {/* Second cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
@@ -67,8 +69,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
-                {/* Third cert  */}
 
+                {/* Third cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -86,8 +88,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
+
                 {/* Fourth cert  */}
-                {/* Fifth cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -105,7 +107,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
-                {/* Sixth cert  */}
+
+                {/* Fifth cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -123,7 +126,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
-                {/* Seventh cert  */}
+
+                {/* Sixth cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -141,7 +145,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
-                {/* Eight cert  */}
+
+                {/* Seventh cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -159,7 +164,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
-                {/* Nine cert  */}
+
+                {/* Eight cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -177,7 +183,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
-                {/* Ten cert  */}
+
+                {/* Nine cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -195,7 +202,8 @@ const Certification = () => {
                     </h1>
                   </CardFooter>
                 </Card>
-                {/* Eleven cert  */}
+
+                {/* 10th cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem] mt-2  ">
                   <CardContent className="p-0 h-full  ">
                     <img
@@ -214,6 +222,79 @@ const Certification = () => {
                   </CardFooter>
                 </Card>
               </div>
+            </div>
+          </div>
+
+          {/* Mobile View */}
+          <div className="md:hidden">
+            <div className=" flex justify-center flex-col  mx-4">
+              <h1 className="text-foreground text-[42px] font-medium tracking-wider  ">
+                Certifications
+              </h1>
+              <p className="text-foreground text-lg  ">
+                During my upskilling journey, I earned several certifications
+                that helped me understand how things work in practice. I am
+                actively seeking new certifications to further expand my
+                knowledge and skills, with the goal of applying them to
+                real-world scenarios.
+              </p>
+            </div>
+
+            <div className="py-4 flex flex-col items-center">
+              {/* First cert  */}
+              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[28rem]  ">
+                <CardContent className="p-0 h-full  ">
+                  <img
+                    src={bayan}
+                    className="animate-fade-in block h-full w-full  rounded-lg scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
+                    alt=""
+                  />
+                </CardContent>
+                <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
+                  <h1 className="text-2xl font-bold text-[#1e293b] rounded-b-lg">
+                    JavaScript Programming
+                  </h1>
+                  <h1 className="text-sm font-light text-[#1e293b]">
+                    Certificate of completion
+                  </h1>
+                </CardFooter>
+              </Card>
+              {/* Second cert  */}
+              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[28rem] mt-2  ">
+                <CardContent className="p-0 h-full  ">
+                  <img
+                    src={softwareengineering}
+                    className="animate-fade-in block h-full w-full  rounded-lg scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
+                    alt=""
+                  />
+                </CardContent>
+                <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
+                  <h1 className="text-2xl font-bold text-[#1e293b] rounded-b-lg">
+                    Software Engineering
+                  </h1>
+                  <h1 className="text-sm font-light text-[#1e293b]">
+                    Certificate of completion
+                  </h1>
+                </CardFooter>
+              </Card>
+              {/* Third cert  */}
+              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[28rem] mt-2  ">
+                <CardContent className="p-0 h-full  ">
+                  <img
+                    src={cloudcomputing}
+                    className="animate-fade-in block h-full w-full  rounded-lg scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
+                    alt=""
+                  />
+                </CardContent>
+                <CardFooter className="absolute bottom-0 left-0 w-full flex flex-col items-center   p-1 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0    backdrop-blur-md bg-muted/100 mx-auto">
+                  <h1 className="text-2xl font-bold text-[#1e293b]   rounded-b-lg">
+                    Cloud Computing
+                  </h1>
+                  <h1 className="text-sm font-light text-[#1e293b]  ">
+                    Certificate of completion
+                  </h1>
+                </CardFooter>
+              </Card>
             </div>
           </div>
         </div>
