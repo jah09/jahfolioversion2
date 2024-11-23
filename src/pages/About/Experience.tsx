@@ -11,7 +11,7 @@ const Experience = () => {
           <div className="lg:w-3/5 md:w-full">
             <div className="w-full max-w-6xl mx-auto">
               <div className="flex flex-col justify-center ">
-                <div className="w-full max-w-3xl mx-auto bg-red-900">
+                <div className="w-full max-w-3xl mx-auto">
                   <div className="">
                     <div className="relative pl-[155px] mb-2 md:pl-[115px]">
                       <div className="font-medium text-foreground mb-1 sm:mb-0">
@@ -98,8 +98,8 @@ const Experience = () => {
               </div>
             </div>
           </div>
-          <div className=" w-2/5  p-2 flex flex-col justify-center ml-4">
-            <h1 className="text-foreground text-[42px] font-medium tracking-wider   ">
+          <div className=" w-2/5 p-2 flex flex-col justify-center ml-4 sm:w-full">
+            <h1 className="text-foreground text-[42px] font-medium tracking-wider">
               Experience
             </h1>
             <p className="text-foreground text-lg  tracking-wide">
@@ -126,7 +126,7 @@ const Experience = () => {
           </div>
           <div className="mt-10 sm:flex sm:justify-center">
             <div className="mx-4 mb-2">
-              <div className="font-medium text-foreground mb-1 sm:mb-0 sm:bg-red-900">
+              <div className="font-medium text-foreground mb-1 sm:mb-0">
                 The history
               </div>
 
