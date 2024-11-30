@@ -17,7 +17,7 @@ body * {
   }
   :root {
     --background: hsl(0, 0%, 100%);
-    --foreground: hsl(222.2, 84%, 4.9%);
+    --foreground: #020817;
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(222.2, 84%, 4.9%);
     --popover: hsl(0, 0%, 100%);
@@ -55,7 +55,7 @@ body * {
     --secondary: hsl(217.2, 32.6%, 17.5%);
     --secondary-foreground: hsl(210, 40%, 98%);
     --muted: rgb(30, 41, 59);
-    --muted-foreground: hsl(215, 20.2%, 65.1%);
+    --muted-foreground: #94a3b8;
     --accent: hsl(217.2, 32.6%, 17.5%);
     --accent-foreground: hsl(210, 40%, 98%);
     --destructive: hsl(0, 62.8%, 30.6%);

@@ -7,15 +7,19 @@ import { RiMoonClearFill } from "react-icons/ri";
 import { FiSun } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
-import { motion } from "framer-motion";
+import myLogo_dark from "@/assets/image/myLogo_dark.gif";
+import myLogo_light from "@/assets/image/myLogo_light.gif";
+import { useTheme } from "@/hooks/useTheme";
 const Header = () => {
   //state
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const { darkMode, toggleDarkMode } = useTheme();
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  //toogle darkmode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+
+  // const [darkMode, setDarkMode] = useState<boolean>(true);
+  // //toogle darkmode
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  // };
 
   //hooks
   useEffect(() => {
@@ -32,10 +36,22 @@ const Header = () => {
   };
   return (
     <nav className=" fixed top-0 w-full z-50">
-      <div className="p-3   shadow-sm shadow-accent  bg-background   w-full lg:px-[80px] xl:px-[100px] md:px-2  ">
-        <div className="flex justify-between items-center   md:px-2 max-sm:px-2 z-50 ">
-          <div className="max-sm:bg-red-500 sm:bg-blue-500 md:bg-green-500 lg:bg-orange-500 xl:bg-violet-500">
-            Icon{" "}
+      <div className="  shadow-sm shadow-accent bg-background  w-full lg:px-[80px] xl:px-[100px] md:px-2  h-14">
+        <div className="flex justify-between  items-center md:px-2 max-sm:px-2 z-50 py-1">
+          <div className="cursor-pointer">
+            {!darkMode ? (
+              <img
+                src={myLogo_light}
+                alt="logo"
+                className="w-14 h-14 rounded-full"
+              />
+            ) : (
+              <img
+                src={myLogo_dark}
+                alt="logo"
+                className="w-14 h-14 rounded-full"
+              />
+            )}
           </div>
           {/*Navbar menu  max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500*/}
           <nav className="max-sm:hidden sm:hidden  md:block stroke">
@@ -120,7 +136,7 @@ const Header = () => {
             </div>
           </div>
           {/* Mobile view */}
-          <div className="sm:block md:hidden max-sm:flex max-sm:space-x-2 sm:space-x-2">
+          <div className="sm:block md:hidden max-sm:flex max-sm:space-x-2 sm:space-x-2 sm:mr-4  ">
             <button onClick={toggleDarkMode} className=" ">
               {!darkMode ? (
                 <RiMoonClearFill
@@ -134,6 +150,7 @@ const Header = () => {
                 />
               )}
             </button>
+
             <button>
               {!showMenu ? (
                 <RxHamburgerMenu
