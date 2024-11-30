@@ -21,12 +21,16 @@ import {
 import { IoLogoCss3 } from "react-icons/io";
 import { FaJsSquare } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
-import { SiLaragon, SiAndroidstudio } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandDjango } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
-import { SiXamarin } from "react-icons/si";
-import { SiPostman } from "react-icons/si";
+import {
+  SiXamarin,
+  SiPostman,
+  SiLaragon,
+  SiAndroidstudio,
+  SiInertia,
+} from "react-icons/si";
 export interface Technology {
   techLink: string;
   techName: string;
@@ -57,6 +61,16 @@ export const technologies: Technology[] = [
     techName: "Postman",
     techLink: "https://www.postman.com/",
     icon: SiPostman,
+  },
+  {
+    techName: "Vuejs",
+    techLink: "https://vuejs.org/",
+    icon: FaVuejs,
+  },
+  {
+    techName: "Inertia",
+    techLink: "https://inertiajs.com/",
+    icon: SiInertia,
   },
   {
     techName: "React Native",
@@ -108,11 +122,6 @@ export const technologies: Technology[] = [
     techName: "Python",
     techLink: "https://docs.python.org/3/",
     icon: FaPython,
-  },
-  {
-    techName: "Vuejs",
-    techLink: "https://vuejs.org/",
-    icon: FaVuejs,
   },
   {
     techName: "Git",

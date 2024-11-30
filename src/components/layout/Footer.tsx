@@ -4,7 +4,21 @@ import { SiShadcnui } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import gmail from "@/assets/svg/gmail.svg";
+import myLogo_dark from "@/assets/image/myLogo_dark.gif";
+import myLogo_light from "@/assets/image/myLogo_light.gif";
+import { useTheme } from "@/hooks/useTheme";
+
+/**
+ * Footer component.
+ *
+ * This component renders a footer section with a logo, copyright information, and social media links.
+ *
+ * @returns {JSX.Element} The footer component.
+ */
 const Footer = () => {
+  //state
+  const { darkMode } = useTheme();
+ 
   //Event Handler
   const handleSocmedButton = (buttonType: string) => {
     if (buttonType === "linkedin") {
@@ -14,8 +28,8 @@ const Footer = () => {
         "noreferrer"
       );
     } else {
-       window.location.href =
-         "mailto:jlsuhot@gmail.com?subject=Contact from portfolio";
+      window.location.href =
+        "mailto:jlsuhot@gmail.com?subject=Contact from portfolio";
       // TODO:// Add discord link
       // window.open("https://discord.com/.duck09", "_blank", "noreferrer");
     }
@@ -24,8 +38,20 @@ const Footer = () => {
     <section className="">
       {/* max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500*/}
       <div className="p-3 bg-background shadow shadow-accentForeground w-screen lg:px-[100px]  xl:px-[100px]  flex justify-between  max-sm:px-4  sm:px-4 md:px-4   ">
-        <div>
-          <h1 className="text-foreground">Icon here</h1>
+        <div className="md:px-2 max-sm:px-0 sm:px-0 z-50 py-1 lg:px-2">
+          {!darkMode ? (
+            <img
+              src={myLogo_light}
+              alt="logo"
+              className="w-14 h-14 rounded-full"
+            />
+          ) : (
+            <img
+              src={myLogo_dark}
+              alt="logo"
+              className="w-14 h-14 rounded-full"
+            />
+          )}
         </div>
 
         <div className="md:flex-col md:flex items-center  max-sm:hidden sm:hidden">
@@ -51,11 +77,11 @@ const Footer = () => {
             </span>
             Gmail
           </p>
-          <div className="text-foreground mt-2 text-sm  ">
+          <div className="text-foreground mt-2 text-sm">
             © 2024 - Jafolio. All Rights Reserved
           </div>
         </div>
-        <div className="text-foreground  text-sm  max-sm:block md:hidden sm:block">
+        <div className="text-foreground  text-sm  max-sm:block md:hidden sm:block max-sm:mt-4 sm:mt-4">
           © 2024 - Jafolio. All Rights Reserved
         </div>
         {/* <div className="text-foreground ">
