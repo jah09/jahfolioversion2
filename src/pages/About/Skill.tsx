@@ -8,7 +8,7 @@ const Skill = () => {
     window.open(item.techLink);
   };
   return (
-    <section className=" bg-background">
+    <section className="bg-background">
       <div className="lg:px-20  min-h-screen">
         <div className="py-[70px] max-sm:py-[50px]  sm:py-[50px]">
           <div className="md:flex md:flex-row lg:mx-5 mx-20 max-sm:mx-4 sm:mx-4 max-sm:flex max-sm:flex-col-reverse sm:flex sm:flex-col-reverse">

@@ -35,8 +35,8 @@ const Header = () => {
     setShowMenu((prevState) => !prevState);
   };
   return (
-    <nav className=" fixed top-0 w-full z-50">
-      <div className="  shadow-sm shadow-accent bg-background  w-full lg:px-[80px] xl:px-[100px] md:px-2  h-14">
+    <nav className="fixed top-0 w-full z-50">
+      <div className="shadow-sm shadow-accent bg-background  w-full lg:px-[80px] xl:px-[100px] md:px-2 h-14">
         <div className="flex justify-between  items-center md:px-2 max-sm:px-2 z-50 py-1">
           <div className="cursor-pointer">
             {!darkMode ? (
@@ -136,8 +136,8 @@ const Header = () => {
             </div>
           </div>
           {/* Mobile view */}
-          <div className="sm:block md:hidden max-sm:flex max-sm:space-x-2 sm:space-x-2 sm:mr-4  ">
-            <button onClick={toggleDarkMode} className=" ">
+          <div className="sm:block md:hidden max-sm:flex max-sm:space-x-2 sm:space-x-2 px-8 max-sm:px-2 sm:bg-red-900 ">
+            <button onClick={toggleDarkMode} className="">
               {!darkMode ? (
                 <RiMoonClearFill
                   className="w-5 h-5  "

@@ -31,7 +31,7 @@ const Hero = () => {
     }
   }
   return (
-    <section className=" min-h-screen   bg-background ">
+    <section className="min-h-[80vh] bg-background ">
       <div className=" lg:flex  md:flex items-center lg:px-20">
         {/* Blob */}
         <HeroBlob />
@@ -64,7 +64,7 @@ const Hero = () => {
             </Button>
           </div>
           {/* Icons */}
-          <div className="py-2 flex space-x-2 max-sm:px-5 sm:px-5 md:mt-3 max-sm:mt-2 sm:mt-2">
+          <div className="py-8 md:py-3 flex space-x-2 max-sm:px-5 sm:px-5 md:mt-3 max-sm:mt-2 sm:mt-2">
             <FaGithub
               className="w-6 h-6 cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
               style={{ color: "var(--foreground)" }}
