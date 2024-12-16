@@ -136,7 +136,7 @@ const Header = () => {
             </div>
           </div>
           {/* Mobile view */}
-          <div className="sm:block md:hidden max-sm:flex max-sm:space-x-2 sm:space-x-2 px-8 max-sm:px-2 sm:bg-red-900 ">
+          <div className="sm:block md:hidden max-sm:flex max-sm:space-x-2 sm:space-x-2 px-8 max-sm:px-2">
             <button onClick={toggleDarkMode} className="">
               {!darkMode ? (
                 <RiMoonClearFill
