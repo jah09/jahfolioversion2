@@ -14,13 +14,16 @@ const Contact = () => {
   return (
     <section className=" bg-background">
       <div className="lg:px-20 min-h-screen">
-        <div className="py-[60px] flex">
-          <div className="w-1/2">
-            <div className="mt-20">
-              <h1 className="text-foreground text-3xl mx-1">
-                <span className="text-5xl text-foreground underline-offset-4 underline decoration-2">
+        <div className="py-[60px]  md:flex md:flex-row-reverse">
+          <div className="md:w-1/2 w-full bg-blue-900">
+            <img src={contact_us_image} alt="contact_us_image" />
+          </div>
+          <div className="md:w-1/2 bg-red-900">
+            <div className="py-8 px-4">
+              <h1 className="text-foreground text-3xl mx-1 md:flex md:flex-col flex flex-col">
+                <span className="text-5xl text-foreground underline-offset-4 underline decoration-2 md:py-2 py-4">
                   Let's talk business!
-                </span>{" "}
+                </span> 
                 I'd love to hear from you. Here's how you can reach me.
               </h1>
               <div className="mt-10">
@@ -58,23 +61,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="mt-4 ">
-              <div className="flex items-center space-x-2 justify-center">
-                <div>
-                  <hr className="w-64 text-foreground" />
-                </div>
-                <div>
-                  <p className=" text-foreground">Or</p>
-                </div>
-                <div>
-                  {" "}
-                  <hr className="w-64  text-foreground" />
-                </div>
-              </div>
-            </div> */}
-          </div>
-          <div className="w-1/2  ">
-            <img src={contact_us_image} alt="contact_us_image" />
           </div>
         </div>
       </div>

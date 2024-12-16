@@ -49,7 +49,7 @@ const Projects = () => {
           </div>
 
           <div className="">
-            <ul className="flex space-x-3 mt-2">
+            <ul className="flex space-x-3 mt-2  flex-wrap gap-1 justify-center">
               {tags &&
                 Object.values(tags).map((item, index: number) => {
                   return (
@@ -71,11 +71,11 @@ const Projects = () => {
             </ul>
 
             {/* Projects here */}
-            <div className="lg:grid lg:grid-cols-3 gap-4">
+            <div className="lg:grid lg:grid-cols-3 gap-4  ">
               {passedProjectsData &&
                 Object.values(passedProjectsData).map((item, index) => (
                   <Card
-                    className="w-96 h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300"
+                    className="w-[360px] md:w-full h-auto mt-4 bg-background hover:bg-accent transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 justify-self-center"
                     key={index}
                   >
                     <CardContent className="rounded-xl mx-2 p-0 mt-1">

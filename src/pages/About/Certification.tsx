@@ -14,7 +14,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 const Certification = () => {
   return (
     <section>
-      <div className="lg:px-20  min-h-screen  bg-background">
+      <div className="lg:px-20 min-h-screen bg-background w-full">
         <div className="py-[50px] ">
           {/* Web View */}
           <div className="md:flex md:flex-row mx-10 max-sm:hidden sm:hidden">
@@ -227,7 +227,7 @@ const Certification = () => {
 
           {/* Mobile View */}
           <div className="md:hidden">
-            <div className=" flex justify-center flex-col  mx-4">
+            <div className=" flex justify-center flex-col mx-4">
               <h1 className="text-foreground text-[42px] font-medium tracking-wider  ">
                 Certifications
               </h1>
@@ -242,7 +242,7 @@ const Certification = () => {
 
             <div className="py-4 flex flex-col items-center">
               {/* First cert  */}
-              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[28rem]  ">
+              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[22rem]   ">
                 <CardContent className="p-0 h-full  ">
                   <img
                     src={bayan}
@@ -260,7 +260,7 @@ const Certification = () => {
                 </CardFooter>
               </Card>
               {/* Second cert  */}
-              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[28rem] mt-2  ">
+              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[22rem] mt-2  ">
                 <CardContent className="p-0 h-full  ">
                   <img
                     src={softwareengineering}
@@ -278,7 +278,7 @@ const Certification = () => {
                 </CardFooter>
               </Card>
               {/* Third cert  */}
-              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[28rem] mt-2  ">
+              <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[22rem] mt-2  ">
                 <CardContent className="p-0 h-full  ">
                   <img
                     src={cloudcomputing}

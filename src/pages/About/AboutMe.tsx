@@ -35,12 +35,12 @@ const About = () => {
             {/* Image */}
             <div className="max-sm:w-full md:w-full flex justify-center ">
               <div className="relative group lg:ml-10">
-                <div className="rounded-md bg-accentForeground p-0.5 origin-top rotate-[5deg] hover:skew-y-2  z-20 relative  group-hover:z-10 transition-all duration-300 ease-in-out ">
+                <div className="rounded-md bg-accentForeground p-0.5 origin-top rotate-[4deg] hover:skew-y-2  z-20 relative  group-hover:z-10 transition-all duration-300 ease-in-out ">
                   <img
                     src={aboutImageOne}
                     width={300}
                     alt="about me image "
-                    className="  rounded-md "
+                    className="rounded-md "
                   />
                 </div>
                 <div className="rounded-md bg-accentForeground  p-0.5 hover:skew-y-2 z-10 absolute top-0 origin-top-left -rotate-[3deg] left-0  group-hover:z-20 group-hover:-rotate-[7deg] transition-all duration-300 ease-in-out">
@@ -48,7 +48,7 @@ const About = () => {
                     src={aboutImageTwo}
                     width={300}
                     alt="about me image "
-                    className="  rounded-md "
+                    className="rounded-md "
                   />
                 </div>
               </div>
