@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <section className="">
       {/* max-sm:bg-red-500 sm:bg-blue-200 md:bg-green-500 lg:bg-orange-500*/}
-      <div className="p-3 bg-background shadow shadow-accentForeground w-screen lg:px-[100px]  xl:px-[100px]  flex justify-between  max-sm:px-4  sm:px-4 md:px-4   ">
+      <div className="p-3 bg-background shadow shadow-accentForeground w-screen lg:px-[100px]  xl:px-[100px]  flex justify-between max-sm:px-4 sm:px-4 md:px-4">
         <div className="md:px-2 max-sm:px-0 sm:px-0 z-50 py-1 lg:px-2">
           {!darkMode ? (
             <img
