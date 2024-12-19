@@ -12,18 +12,18 @@ const Contact = () => {
     }
   };
   return (
-    <section className=" bg-background">
+    <section className="bg-background">
       <div className="lg:px-20 min-h-screen">
         <div className="py-[60px]  md:flex md:flex-row-reverse">
-          <div className="md:w-1/2 w-full bg-blue-900">
+          <div className="md:w-1/2 w-full">
             <img src={contact_us_image} alt="contact_us_image" />
           </div>
-          <div className="md:w-1/2 bg-red-900">
+          <div className="md:w-1/2">
             <div className="py-8 px-4">
               <h1 className="text-foreground text-3xl mx-1 md:flex md:flex-col flex flex-col">
                 <span className="text-5xl text-foreground underline-offset-4 underline decoration-2 md:py-2 py-4">
                   Let's talk business!
-                </span> 
+                </span>
                 I'd love to hear from you. Here's how you can reach me.
               </h1>
               <div className="mt-10">
@@ -47,9 +47,17 @@ const Contact = () => {
                   <span>
                     <BiSolidPhoneCall className="w-8 h-8 text-foreground items-center" />
                   </span>
-                  <label htmlFor="" className="text-foreground text-xl">
-                    0907-508-7284
-                  </label>
+                  <div className="flex flex-col">
+                    <label htmlFor="" className="text-foreground text-xl">
+                      0907-508-7284
+                    </label>
+                    <label htmlFor="" className="text-foreground text-xl">
+                      0994-289-4494
+                    </label>
+                    <label htmlFor="" className="text-foreground text-xl">
+                      0970-586-3239
+                    </label>
+                  </div>
                 </div>
                 <div className="flex space-x-3 py-1">
                   <span>
