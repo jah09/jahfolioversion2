@@ -277,10 +277,7 @@ const projectsData: Project[] = [
       },
       {
         featureDescription: "User can store files in an S3 bucket",
-      },
-      {
-        featureDescription: "And many more.",
-      },
+      }
     ],
   },
   {
@@ -351,9 +348,6 @@ const projectsData: Project[] = [
       },
       {
         featureDescription: "Modify brands",
-      },
-      {
-        featureDescription: "And many more.",
       },
     ],
   },

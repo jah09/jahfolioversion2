@@ -71,7 +71,7 @@ const ProjectDetails = () => {
   };
 
   return (
-    <section className="min-h-[80vh] bg-green-900">
+    <section className="min-h-[80vh] bg-background">
       <div className="py-[40px] lg:px-20">
         <div>
           <Link to="/projects">
@@ -83,8 +83,8 @@ const ProjectDetails = () => {
         </div>
         <div className="md:flex ">
           {/* Project Image */}
-          <div className="bg-red-900">
-            <Card className=" mt-4 flex h-96 md:h-auto bg-background">
+          <div>
+            <Card className="mt-4 flex h-96 md:h-auto bg-background mx-2">
               {/* Small Card Project Image */}
               <div
                 className={`hidden md:block p-1 mr-2 ${
@@ -148,7 +148,7 @@ const ProjectDetails = () => {
           </div>
 
           {/* Project description */}
-          <div className="md:w-[49%] mt-4 md:h-[500px] h-full px-8 scrollbar bg-blue-900">
+          <div className="md:w-[49%] mt-4 md:h-[500px] h-full px-8 scrollbar">
             <div className=" px-2 ">
               <h1 className="font-medium text-foreground text-3xl">
                 {allProjectsData && allProjectsData[0].name}
@@ -157,13 +157,13 @@ const ProjectDetails = () => {
                 Description: {allProjectsData && allProjectsData[0].description}
               </p>
               <div className="mt-4">
-                <ul className="list-disc list-inside truncate">
+                <ul className="md:list-disc md:list-inside md:truncate">
                   {allProjectsData &&
                     Array.isArray(allProjectsData[0]?.features) &&
                     allProjectsData[0].features.map((item, index) => (
                       <li
                         key={index}
-                        className="text-foreground bg-red-900"
+                        className="text-foreground max-sm:list-disc "
                       >
                         {item.featureDescription}
                       </li>
@@ -182,7 +182,7 @@ const ProjectDetails = () => {
                   ))}
               </div>
               {/* Buttons here */}
-              <div className="md:mt-4 mt-6 bg-red-900">
+              <div className="md:mt-4 mt-6">
                 <Button
                   className="w-full mt-2 h-12 flex gap-x-4"
                   size="lg"
