@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import HeroBlob from "@/components/HeroBlob";
 import { BsDiscord } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import Suhot_Resume from '@/data/Hero/resume/Suhot_Resume.pdf'
+import Suhot_Resume from "@/data/Hero/resume/Suhot_Resume.pdf";
 const Hero = () => {
   //Hooks
   useEffect(() => {
@@ -12,9 +12,9 @@ const Hero = () => {
   }, []);
 
   //Event Handler
-    const handleDownloadPdf = () => {
-      window.open(Suhot_Resume);
-    };
+  const handleDownloadPdf = () => {
+    window.open(Suhot_Resume);
+  };
 
   const handleSocmedButton = (buttonType: string) => {
     if (buttonType === "github") {
@@ -26,10 +26,13 @@ const Hero = () => {
         "noreferrer"
       );
     } else if (buttonType === "discord") {
-     // TODO:// Add discord link
-     // window.open("https://discord.com/.duck09", "_blank", "noreferrer");
+      window.open(
+        "https://discord.com/users/1025032704485490739",
+        "_blank",
+        "noreferrer"
+      );
     }
-  }
+  };
   return (
     <section className="min-h-[80vh] bg-background ">
       <div className=" lg:flex  md:flex items-center lg:px-20">

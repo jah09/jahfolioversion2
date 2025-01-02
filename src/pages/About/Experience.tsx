@@ -98,11 +98,11 @@ const Experience = () => {
               </div>
             </div>
           </div>
-          <div className=" w-2/5 p-2 flex flex-col justify-center ml-4 sm:w-full">
+          <div className="w-2/5 p-2 flex flex-col justify-center ml-4 md:ml-0 lg:ml-4 sm:w-full">
             <h1 className="text-foreground text-[42px] font-medium tracking-wider">
               Experience
             </h1>
-            <p className="text-foreground text-lg  tracking-wide">
+            <p className="text-foreground text-lg text-start tracking-wide">
               This timeline shows my journey from the start of my studies,
               through my internship, to landing my first job. It highlights
               important milestones and achievements, showing how I've grown and
@@ -114,7 +114,7 @@ const Experience = () => {
         {/* Mobile View */}
         <div className="max-sm:block md:hidden">
           <div className="flex flex-col justify-center mx-4">
-            <h1 className="text-foreground text-[42px] font-medium tracking-wider   ">
+            <h1 className="text-foreground text-[42px] font-medium tracking-wider">
               Experience
             </h1>
             <p className="text-foreground text-lg  tracking-wide">
@@ -129,7 +129,6 @@ const Experience = () => {
               <div className="font-medium text-foreground mb-1 sm:mb-0">
                 The history
               </div>
-
               {experiences &&
                 experiences.map((item, index) => (
                   <div className="relative" key={index}>

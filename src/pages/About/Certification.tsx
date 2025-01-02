@@ -17,9 +17,9 @@ const Certification = () => {
       <div className="lg:px-20 min-h-screen bg-background w-full">
         <div className="py-[50px] ">
           {/* Web View */}
-          <div className="md:flex md:flex-row mx-10 max-sm:hidden sm:hidden">
-            <div className=" w-1/2 flex justify-center  flex-col  mx-4">
-              <h1 className="text-foreground text-[42px] font-medium tracking-wider  ">
+          <div className="md:flex md:flex-row  mx-10 max-sm:hidden sm:hidden">
+            <div className="w-2/5 flex justify-center  flex-col  mx-4">
+              <h1 className="text-foreground md:text-[40px] lg:text-[50px] font-medium tracking-wider">
                 Certifications
               </h1>
               <p className="text-foreground text-lg  ">
@@ -30,7 +30,7 @@ const Certification = () => {
                 real-world scenarios.
               </p>
             </div>
-            <div className=" w-1/2 flex items-center justify-center">
+            <div className="w-3/5 flex items-center justify-center">
               <div className=" h-[500px] overflow-y-auto scrollbar  px-2 ">
                 {/* First cert  */}
                 <Card className="bg-background group relative overflow-hidden p-0 rouded-lg h-72 w-[25rem]  ">

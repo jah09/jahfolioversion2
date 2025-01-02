@@ -43,13 +43,13 @@ const Projects = () => {
       <div className="lg:px-20 min-h-screen">
         <div className="py-[60px]">
           <div className="">
-            <h1 className="text-foreground text-[42px] font-medium tracking-wider  ">
+            <h1 className="text-foreground text-[42px] font-medium tracking-wider">
               Projects
             </h1>
           </div>
 
           <div className="">
-            <ul className="flex space-x-3 mt-2  flex-wrap gap-1 justify-center">
+            <ul className="flex space-x-3 mt-2 max-sm:flex-wrap gap-1 max-sm:justify-center">
               {tags &&
                 Object.values(tags).map((item, index: number) => {
                   return (
